@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>大塚 航世 | 研究者ポートフォリオ</title>
+  <meta name="description" content="XRセキュリティ／ユーザブルセキュリティの研究者ポートフォリオサイト">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/styles.css" rel="stylesheet">
+  <script src="assets/main.js" defer></script>
+</head>
+<body class="bg-black text-light" data-bs-theme="dark">
+
+<header class="navbar navbar-expand-lg navbar-dark bg-gradient-primary sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <i class="bi bi-shield-lock"></i> Kousei Otsuka
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">メニュー</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
+          <li class="nav-item"><a class="nav-link" href="production.html">Production</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-sm btn-outline-light rounded-pill" href="#" target="_blank" rel="noopener">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="py-5">
+  <div class="container">
+    <header class="mb-4">
+      <h1 class="h2 fw-bold d-flex align-items-center gap-2"><i class="bi bi-send"></i> Contact</h1>
+      <p class="text-secondary mb-0">SNSリンクや連絡先。</p>
+    </header>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <section class="card shadow-sm h-100">
+          <div class="card-body">
+            <h2 class="h5">Find me here</h2>
+            <ul class="list-unstyled small">
+              <li class="mb-2"><i class="bi bi-twitter-x"></i> X: <a href="#" target="_blank" rel="noopener">@your_handle</a></li>
+              <li class="mb-2"><i class="bi bi-github"></i> GitHub: <a href="#" target="_blank" rel="noopener">github.com/yourid</a></li>
+              <li class="mb-2"><i class="bi bi-envelope"></i> Mail（大学）: <a href="mailto:example@st.toho-u.ac.jp">example@st.toho-u.ac.jp</a></li>
+              <li class="mb-2"><i class="bi bi-envelope-at"></i> Mail（個人）: <a href="mailto:example@gmail.com">example@gmail.com</a></li>
+              <li class="mb-2"><i class="bi bi-box-arrow-up-right"></i> ORCID: <a href="https://orcid.org/0009-0000-6154-7606" target="_blank" rel="noopener">0009-0000-6154-7606</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div class="col-lg-6">
+        <section class="card shadow-sm h-100">
+          <div class="card-body">
+            <h2 class="h5">メッセージ</h2>
+            <p class="small text-secondary">問い合わせフォームは未実装のダミーです。実運用では外部フォームやメールリンクの利用をご検討ください。</p>
+            <form>
+              <div class="mb-3">
+                <label class="form-label">お名前</label>
+                <input type="text" class="form-control" placeholder="山田 太郎">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">メールアドレス</label>
+                <input type="email" class="form-control" placeholder="taro@example.com">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">内容</label>
+                <textarea class="form-control" rows="5" placeholder="お問い合わせ内容を入力"></textarea>
+              </div>
+              <button type="button" class="btn btn-primary rounded-pill">送信（ダミー）</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="py-5 mt-5 bg-dark text-white-50">
+  <div class="container small">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h5 class="text-white">大塚 航世</h5>
+        <p class="mb-1">XRセキュリティ / ユーザブルセキュリティ</p>
+        <p class="mb-0">© <span id="year"></span> Kousei Otsuka. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a class="text-white-50 me-3" href="https://orcid.org/0009-0000-6154-7606" target="_blank" rel="noopener">
+          <i class="bi bi-box-arrow-up-right"></i> ORCID
+        </a>
+        <a class="text-white-50 me-3" href="#" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i> X</a>
+        <a class="text-white-50" href="#" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
