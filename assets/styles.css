@@ -122,3 +122,17 @@ footer { background-color:#000 !important; }
 
 /* Optional: hover-lift utility (opt-in) */
 [data-hover-lift]{ transition: transform .18s ease, box-shadow .18s ease; will-change: transform; }
+
+.profile-avatar {
+  width: min(240px, 100%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* 趣味画像：比率をそろえてカード内で統一感を出す */
+.hobby-figure { margin: 0; }
+.hobby-img {
+  width: 100%;
+  aspect-ratio: 16 / 10; /* お好みで 4/3 や 3/2 に変更可 */
+  object-fit: cover;
+}

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>大塚 航世 | 研究者ポートフォリオ</title>
-  <meta name="description" content="XRセキュリティ／ユーザブルセキュリティの研究者ポートフォリオサイト">
+  <title>大塚 航世 / Kousei Otsuka (東邦大学ユーザブルセキュリティ研究室)</title>
+  <meta name="description" content="大塚航世の研究者ポートフォリオ">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/styles.css" rel="stylesheet">
@@ -32,7 +32,7 @@
           <li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
           <li class="nav-item"><a class="nav-link" href="production.html">Production</a></li>
           <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
           <li class="nav-item ms-lg-3">
             <a class="btn btn-sm btn-outline-light rounded-pill" href="#" target="_blank" rel="noopener">
               <i class="bi bi-github"></i> GitHub
@@ -51,44 +51,34 @@
       <p class="text-secondary mb-0">SNSリンクや連絡先。</p>
     </header>
 
-    <div class="row g-4">
-      <div class="col-lg-6">
-        <section class="card shadow-sm h-100">
-          <div class="card-body">
-            <h2 class="h5">Find me here</h2>
-            <ul class="list-unstyled small">
-              <li class="mb-2"><i class="bi bi-twitter-x"></i> X: <a href="#" target="_blank" rel="noopener">@your_handle</a></li>
-              <li class="mb-2"><i class="bi bi-github"></i> GitHub: <a href="#" target="_blank" rel="noopener">github.com/yourid</a></li>
-              <li class="mb-2"><i class="bi bi-envelope"></i> Mail（大学）: <a href="mailto:example@st.toho-u.ac.jp">example@st.toho-u.ac.jp</a></li>
-              <li class="mb-2"><i class="bi bi-envelope-at"></i> Mail（個人）: <a href="mailto:example@gmail.com">example@gmail.com</a></li>
-              <li class="mb-2"><i class="bi bi-box-arrow-up-right"></i> ORCID: <a href="https://orcid.org/0009-0000-6154-7606" target="_blank" rel="noopener">0009-0000-6154-7606</a></li>
-            </ul>
-          </div>
-        </section>
-      </div>
-      <div class="col-lg-6">
-        <section class="card shadow-sm h-100">
-          <div class="card-body">
-            <h2 class="h5">メッセージ</h2>
-            <p class="small text-secondary">問い合わせフォームは未実装のダミーです。実運用では外部フォームやメールリンクの利用をご検討ください。</p>
-            <form>
-              <div class="mb-3">
-                <label class="form-label">お名前</label>
-                <input type="text" class="form-control" placeholder="山田 太郎">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">メールアドレス</label>
-                <input type="email" class="form-control" placeholder="taro@example.com">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">内容</label>
-                <textarea class="form-control" rows="5" placeholder="お問い合わせ内容を入力"></textarea>
-              </div>
-              <button type="button" class="btn btn-primary rounded-pill">送信（ダミー）</button>
-            </form>
-          </div>
-        </section>
-      </div>
+  <!-- 左：写真 / 右：Find me here -->
+  <div class="row g-4 align-items-start">
+    <!-- 左カラム：写真（小さめ） -->
+    <div class="col-lg-3">
+      <section class="card shadow-sm h-100">
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <figure class="mb-0 w-100">
+            <img src="images/contact.png" alt="Kousei Otsuka portrait" 
+                class="img-fluid rounded-3 shadow-sm">
+          </figure>
+        </div>
+      </section>
+    </div>
+
+    <!-- 右カラム：Find me here（広め） -->
+    <div class="col-lg-9">
+      <section class="card shadow-sm h-100">
+        <div class="card-body">
+          <h2 class="h5">Find me here</h2>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><i class="bi bi-envelope"></i> Mail（大学）: <a href="6524002o@st.toho-u.ac.jp">6524002o@st.toho-u.ac.jp</a></li>
+            <li class="mb-2"><i class="bi bi-envelope-at"></i> Mail（個人）: <a href="mailto:example@gmail.com">kouseiotsuka@gmail.com</a></li>
+            <li class="mb-2"><i class="bi bi-twitter-x"></i> X: <a href="https://x.com/KouseiOtsuka" target="_blank" rel="noopener">https://x.com/KouseiOtsuka</a></li>
+            <li class="mb-2"><i class="bi bi-github"></i> GitHub: <a href="https://github.com/KouseiOtsuka" target="_blank" rel="noopener">https://github.com/KouseiOtsuka</a></li>
+            <li class="mb-2"><i class="bi bi-box-arrow-up-right"></i> ORCID: <a href="https://orcid.org/0009-0000-6154-7606" target="_blank" rel="noopener">0009-0000-6154-7606</a></li>
+          </ul>
+        </div>
+      </section>
     </div>
   </div>
 </main>
@@ -111,10 +101,11 @@
     </div>
   </div>
 </footer>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/app.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>
