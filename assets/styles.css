@@ -136,3 +136,11 @@ footer { background-color:#000 !important; }
   aspect-ratio: 16 / 10; /* お好みで 4/3 や 3/2 に変更可 */
   object-fit: cover;
 }
+
+/* Awards 画像は常に枠内に収めてトリミング */
+.object-fit-cover { object-fit: cover; }
+
+/* セクション間の小見出しを詰めすぎないように */
+#awards-2025 h3, #awards-2024 h3, #awards-etc h3 {
+  margin-top: .25rem;
+}
