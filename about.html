@@ -1,201 +1,372 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>大塚 航世 / Kousei Otsuka (東邦大学ユーザブルセキュリティ研究室)</title>
-  <meta name="description" content="大塚航世の研究者ポートフォリオ">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/styles.css" rel="stylesheet">
-  <script src="assets/main.js" defer></script>
-</head>
-<body class="bg-black text-light" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<header class="navbar navbar-expand-lg navbar-dark bg-gradient-primary sticky-top shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-      <i class="bi bi-shield-lock"></i> Kousei Otsuka
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNav">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title">メニュー</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
-          <li class="nav-item"><a class="nav-link" href="production.html">Production</a></li>
-          <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-sm btn-outline-light rounded-pill" href="#" target="_blank" rel="noopener">
-              <i class="bi bi-github"></i> GitHub
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</header>
+    <!-- ▼ ページ固有 -->
+    <title>About | 大塚 航世（Kousei Otsuka）</title>
+    <meta
+      name="description"
+      content="XRセキュリティ／ユーザブルセキュリティ研究の自己紹介ページ。所属・研究テーマ・趣味など。"
+    />
+    <link rel="canonical" href="https://kouseiotsuka.github.io/about.html" />
+    <!-- ▲ ページ固有 -->
 
-<main class="py-5">
-  <div class="container">
-    <header class="mb-4">
-      <h1 class="h2 fw-bold d-flex align-items-center gap-2"><i class="bi bi-person-circle"></i> About</h1>
-      <p class="text-secondary mb-0">自己紹介・プロフィール・研究テーマ・趣味。</p>
-    </header>
+    <!-- Open Graph（共通 + 一部ページ固有） -->
+    <meta property="og:type" content="website" />
+    <!-- 記事詳細なら article -->
+    <meta
+      property="og:site_name"
+      content="Kousei Otsuka | XR Security Portfolio"
+    />
+    <meta property="og:title" content="About | 大塚 航世（Kousei Otsuka）" />
+    <!-- ページ固有（titleと同じ） -->
+    <meta
+      property="og:description"
+      content="XRセキュリティ／ユーザブルセキュリティ研究の自己紹介ページ。所属・研究テーマ・趣味など。"
+    />
+    <!-- ページ固有 -->
+    <meta
+      property="og:url"
+      content="https://kouseiotsuka.github.io/about.html"
+    />
+    <!-- ページ固有 -->
+    <meta
+      property="og:image"
+      content="https://kouseiotsuka.github.io/images/ogp.png"
+    />
+    <!-- 共通のOGP画像 -->
+    <meta property="og:locale" content="ja_JP" />
 
-    <!-- 上段：左=プロフィール画像 / 右=プロフィール -->
-    <div class="row g-4 align-items-stretch">
-      <!-- プロフィール画像 -->
-      <div class="col-md-4 col-lg-3">
-        <section class="card shadow-sm h-100">
-          <div class="card-body d-flex justify-content-center">
-            <div class="ratio ratio-1x1" style="max-width: 240px; width: 100%;"></div>
-            <img src="images/about_prof.jpg" alt="Kousei Otsuka portrait"
-                 class="rounded-3 shadow-sm object-fit-cover w-100 h-100">
+    <!-- テーマ色など（共通） -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- CSS / Icons（共通） -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/styles.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="/images/favicon.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="/images/favicon-192.png"
+      type="image/png"
+      sizes="192x192"
+    />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  </head>
+
+  <body class="bg-black text-light" data-bs-theme="dark">
+    <header
+      class="navbar navbar-expand-lg navbar-dark bg-gradient-primary sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <i class="bi bi-shield-lock"></i> Kousei Otsuka
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNav"
+          aria-controls="offcanvasNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasNav"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">メニュー</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
-        </section>
-      </div>
-
-      <!-- プロフィール（氏名・所属など） -->
-      <div class="col-md-8 col-lg-9">
-        <section class="card shadow-sm h-100">
-          <div class="card-body">
-            <h2 class="h5 mb-3">プロフィール</h2>
-
-            <!-- 氏名・肩書き -->
-            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center mb-3">
-              <div>
-                <div class="fs-4 fw-bold">大塚 航世 <span class="text-secondary fs-6">(Kousei Otsuka)</span></div>
-                <div class="small text-secondary">XRセキュリティ / ユーザブルセキュリティ</div>
-              </div>
-              <div class="mt-2 mt-lg-0">
-                <a class="btn btn-sm btn-outline-light rounded-pill me-2" href="https://orcid.org/0009-0000-6154-7606" target="_blank" rel="noopener">
-                  <i class="bi bi-box-arrow-up-right"></i> ORCID
-                </a>
-                <a class="btn btn-sm btn-outline-light rounded-pill me-2" href="#" target="_blank" rel="noopener">
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="publication.html">Publication</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="production.html">Production</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item ms-lg-3">
+                <a
+                  class="btn btn-sm btn-outline-light rounded-pill"
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <i class="bi bi-github"></i> GitHub
                 </a>
-                <a class="btn btn-sm btn-outline-light rounded-pill" href="#" target="_blank" rel="noopener">
-                  <i class="bi bi-twitter-x"></i> X
-                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+        <header class="mb-4">
+          <h1 class="h2 fw-bold d-flex align-items-center gap-2">
+            <i class="bi bi-person-circle"></i> About
+          </h1>
+          <p class="text-secondary mb-0">
+            自己紹介・プロフィール・研究テーマ・趣味。
+          </p>
+        </header>
+
+        <!-- 上段：左=プロフィール画像 / 右=プロフィール -->
+        <div class="row g-4 align-items-stretch">
+          <!-- プロフィール画像 -->
+          <div class="col-md-4 col-lg-3">
+            <section class="card shadow-sm h-100">
+              <div class="card-body d-flex justify-content-center">
+                <div
+                  class="ratio ratio-1x1"
+                  style="max-width: 240px; width: 100%"
+                ></div>
+                <img
+                  src="images/about_prof.jpg"
+                  alt="Kousei Otsuka portrait"
+                  class="rounded-3 shadow-sm object-fit-cover w-100 h-100"
+                />
               </div>
-            </div>
-
-            <!-- 基本情報 -->
-            <ul class="list-unstyled small mb-4">
-              <li><i class="bi bi-person"></i> 年齢: 24歳</li>
-              <li><i class="bi bi-cake"></i> 誕生日: 2001年6月24日</li>
-              <li><i class="bi bi-geo-alt"></i> 出身地: 千葉県</li>
-              <li><i class="bi bi-journal-bookmark"></i> 学年: 修士1年（M1）</li>
-            </ul>
-
-            <!-- 所属 -->
-            <div class="small text-white mb-2 fw-bold">所属</div>
-            <ul class="list-unstyled small mb-3">
-              <li class="mb-1">
-                <i class="bi bi-mortarboard"></i>
-                東邦大学大学院 理学研究科 情報科学専攻（ユーザブルセキュリティ研究室）
-                <a href="https://www.klab.is.sci.toho-u.ac.jp/" target="_blank" rel="noopener" class="text-decoration-none">
-                  <i class="bi bi-box-arrow-up-right ms-1" aria-label="外部リンク"></i>
-                </a>
-              </li>
-              <li class="mb-1">
-                <i class="bi bi-diagram-3"></i>
-                JST CREST IoR 研究チーム
-                <a href="https://www.internet-of-realities.org/" target="_blank" rel="noopener" class="text-decoration-none">
-                  <i class="bi bi-box-arrow-up-right ms-1" aria-label="外部リンク"></i>
-                </a>
-              </li>
-              <li class="mb-1">
-                <i class="bi bi-building-lock"></i>
-                NICT サイバーセキュリティ研究室（RA）
-                <a href="https://csl.nict.go.jp/" target="_blank" rel="noopener" class="text-decoration-none">
-                  <i class="bi bi-box-arrow-up-right ms-1" aria-label="外部リンク"></i>
-                </a>
-              </li>
-            </ul>
-
-            <!-- 自己紹介（短文） -->
-            <p class="mb-0">
-              東邦大学ユーザブルセキュリティ研究室の大塚航世です。皆さんに、安全で安心なメタバース体験ができるよう日々研究をしています！
-            </p>
+            </section>
           </div>
-        </section>
-      </div>
-    </div>
 
-    <!-- 中段：研究テーマ（全幅） -->
-    <div class="row g-4 mt-1">
-      <div class="col-12">
-        <section class="card shadow-sm h-100">
-          <div class="card-body">
-            <h2 class="h5">研究テーマ</h2>
-            <p class="mb-2">
-              XR技術の人の認知的側面に関するリスクやセキュリティに関する研究を行っています。<br>
-              ARやVRを代表とするXR技術はメタバースやデジタルツインといった次世代的な概念の中核を担う技術であり、ユーザに物理的リアリティを超えた体験を提供してくれる技術です。<br>
-              現在XR技術は目覚ましい発展を遂げていますが、様々なリスクが潜在しています。それらのリスクを明らかにし、安全に利用できるようにする研究をしています。<br>
-              修士では、聴覚刺激を悪用した視点操作攻撃（Auditory Viewpoint Manipulation Attack: AVMA）の評価をテーマとし、ユーザスタディを通してリスクの分析、評価を行っています。
-            </p>
-          </div>
-        </section>
-      </div>
-    </div>
+          <!-- プロフィール（氏名・所属など） -->
+          <div class="col-md-8 col-lg-9">
+            <section class="card shadow-sm h-100">
+              <div class="card-body">
+                <h2 class="h5 mb-3">プロフィール</h2>
 
-    <!-- 下段：趣味（全幅 2カラム） -->
-    <div class="row g-4 mt-1">
-      <div class="col-12">
-        <section class="card shadow-sm h-100">
-          <div class="card-body">
-            <h2 class="h5">趣味</h2>
-
-            <div class="row g-3 align-items-start">
-              <!-- 左：画像 -->
-              <div class="col-12 col-md-6">
-                <figure class="hobby-figure mb-0">
-                  <div class="ratio ratio-16x9">
-                    <img src="images/hob1.jpg" alt="Hobby photo 1"
-                        class="rounded-3 shadow-sm object-fit-cover w-100 h-100" loading="lazy">
+                <!-- 氏名・肩書き -->
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center mb-3"
+                >
+                  <div>
+                    <div class="fs-4 fw-bold">
+                      大塚 航世
+                      <span class="text-secondary fs-6">(Kousei Otsuka)</span>
+                    </div>
+                    <div class="small text-secondary">
+                      XRセキュリティ / ユーザブルセキュリティ
+                    </div>
                   </div>
-                </figure>
-              </div>
+                  <div class="mt-2 mt-lg-0">
+                    <a
+                      class="btn btn-sm btn-outline-light rounded-pill me-2"
+                      href="https://orcid.org/0009-0000-6154-7606"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i class="bi bi-box-arrow-up-right"></i> ORCID
+                    </a>
+                    <a
+                      class="btn btn-sm btn-outline-light rounded-pill me-2"
+                      href="#"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i class="bi bi-github"></i> GitHub
+                    </a>
+                    <a
+                      class="btn btn-sm btn-outline-light rounded-pill"
+                      href="#"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <i class="bi bi-twitter-x"></i> X
+                    </a>
+                  </div>
+                </div>
 
-              <!-- 右：説明 + サブ画像 -->
-              <div class="col-12 col-md-6">
-                <p>
-                  僕はドライブ旅行が好きで、月に一度、研究のリフレッシュを兼ねた旅行に出かけています。旅先では、その土地ならではの美味しい料理を食べ歩きしたり、壮大な自然を散策したり、ゆったりと温泉に浸かることを楽しんでいます。旅を通じて、新しい発見やリラックスできる時間を大切にし、研究へのモチベーションを高めています。<br><br>
-                  また、キャンプも大好きで、特に春と秋には自然の中でのんびり過ごすのが恒例です。澄んだ空気を感じながらのハイキング、BBQは格別で、夜には焚き火や星空を眺めながらゆったりとした時間を楽しんでいます。
+                <!-- 基本情報 -->
+                <ul class="list-unstyled small mb-4">
+                  <li><i class="bi bi-person"></i> 年齢: 24歳</li>
+                  <li><i class="bi bi-cake"></i> 誕生日: 2001年6月24日</li>
+                  <li><i class="bi bi-geo-alt"></i> 出身地: 千葉県</li>
+                  <li>
+                    <i class="bi bi-journal-bookmark"></i> 学年: 修士2年（M2）
+                  </li>
+                </ul>
+
+                <!-- 所属 -->
+                <div class="small text-white mb-2 fw-bold">所属</div>
+                <ul class="list-unstyled small mb-3">
+                  <li class="mb-1">
+                    <i class="bi bi-mortarboard"></i>
+                    東邦大学大学院 理学研究科
+                    情報科学専攻（ユーザブルセキュリティ研究室）
+                    <a
+                      href="https://www.klab.is.sci.toho-u.ac.jp/"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-decoration-none"
+                    >
+                      <i
+                        class="bi bi-box-arrow-up-right ms-1"
+                        aria-label="外部リンク"
+                      ></i>
+                    </a>
+                  </li>
+                  <li class="mb-1">
+                    <i class="bi bi-diagram-3"></i>
+                    JST CREST IoR 研究チーム
+                    <a
+                      href="https://www.internet-of-realities.org/"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-decoration-none"
+                    >
+                      <i
+                        class="bi bi-box-arrow-up-right ms-1"
+                        aria-label="外部リンク"
+                      ></i>
+                    </a>
+                  </li>
+                  <li class="mb-1">
+                    <i class="bi bi-building-lock"></i>
+                    NICT サイバーセキュリティ研究室（RA）
+                    <a
+                      href="https://csl.nict.go.jp/"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-decoration-none"
+                    >
+                      <i
+                        class="bi bi-box-arrow-up-right ms-1"
+                        aria-label="外部リンク"
+                      ></i>
+                    </a>
+                  </li>
+                </ul>
+
+                <!-- 自己紹介（短文） -->
+                <p class="mb-0">
+                  東邦大学ユーザブルセキュリティ研究室の大塚航世です。皆さんに、安全で安心なメタバース体験ができるよう日々研究をしています！
                 </p>
+              </div>
+            </section>
+          </div>
+        </div>
 
-                <!-- 小さな画像2枚横並び -->
-                <div class="row g-2 mt-2">
-                  <div class="col-6">
-                    <img src="images/hob2.jpg" alt="Hobby sub photo 1" class="img-fluid rounded-3 shadow-sm">
+        <!-- 中段：研究テーマ（全幅） -->
+        <div class="row g-4 mt-1">
+          <div class="col-12">
+            <section class="card shadow-sm h-100">
+              <div class="card-body">
+                <h2 class="h5">研究テーマ</h2>
+                <p class="mb-2">
+                  XR技術の人の認知的側面に関するリスクやセキュリティに関する研究を行っています。<br />
+                  ARやVRを代表とするXR技術はメタバースやデジタルツインといった次世代的な概念の中核を担う技術であり、ユーザに物理的リアリティを超えた体験を提供してくれる技術です。<br />
+                  現在XR技術は目覚ましい発展を遂げていますが、様々なリスクが潜在しています。それらのリスクを明らかにし、安全に利用できるようにする研究をしています。<br />
+                  修士では、聴覚刺激を悪用した視点操作攻撃（Auditory Viewpoint
+                  Manipulation Attack:
+                  AVMA）の評価をテーマとし、ユーザスタディを通してリスクの分析、評価を行っています。
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- 下段：趣味（全幅 2カラム） -->
+        <div class="row g-4 mt-1">
+          <div class="col-12">
+            <section class="card shadow-sm h-100">
+              <div class="card-body">
+                <h2 class="h5">趣味</h2>
+
+                <div class="row g-3 align-items-start">
+                  <!-- 左：画像 -->
+                  <div class="col-12 col-md-6">
+                    <figure class="hobby-figure mb-0">
+                      <div class="ratio ratio-16x9">
+                        <img
+                          src="images/hob1.jpg"
+                          alt="Hobby photo 1"
+                          class="rounded-3 shadow-sm object-fit-cover w-100 h-100"
+                          loading="lazy"
+                        />
+                      </div>
+                    </figure>
                   </div>
-                  <div class="col-6">
-                    <img src="images/hob3.jpg" alt="Hobby sub photo 2" class="img-fluid rounded-3 shadow-sm">
+
+                  <!-- 右：説明 + サブ画像 -->
+                  <div class="col-12 col-md-6">
+                    <p>
+                      僕はドライブ旅行が好きで、月に一度、研究のリフレッシュを兼ねた旅行に出かけています。旅先では、その土地ならではの美味しい料理を食べ歩きしたり、壮大な自然を散策したり、ゆったりと温泉に浸かることを楽しんでいます。旅を通じて、新しい発見やリラックスできる時間を大切にし、研究へのモチベーションを高めています。<br /><br />
+                      また、キャンプも大好きで、特に春と秋には自然の中でのんびり過ごすのが恒例です。澄んだ空気を感じながらのハイキング、BBQは格別で、夜には焚き火や星空を眺めながらゆったりとした時間を楽しんでいます。
+                    </p>
+
+                    <!-- 小さな画像2枚横並び -->
+                    <div class="row g-2 mt-2">
+                      <div class="col-6">
+                        <img
+                          src="images/hob2.jpg"
+                          alt="Hobby sub photo 1"
+                          class="img-fluid rounded-3 shadow-sm"
+                        />
+                      </div>
+                      <div class="col-6">
+                        <img
+                          src="images/hob3.jpg"
+                          alt="Hobby sub photo 2"
+                          class="img-fluid rounded-3 shadow-sm"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
+            </section>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+    </main>
 
-  </div>
-</main>
-
-<!-- JSは依存順にフッターで読込み -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/app.js"></script>
-</body>
+    <!-- JSは依存順にフッターで読込み -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
 </html>
