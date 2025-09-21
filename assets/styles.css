@@ -468,3 +468,17 @@ footer {
   background: rgba(255, 255, 255, 0.25);
   border-radius: 999px;
 }
+
+/* ナビ左上のブランドアイコン */
+.brand-icon {
+  width: 28px; /* お好みで 24 or 32 でもOK */
+  height: 28px;
+  object-fit: contain; /* 画像がはみ出さない */
+  display: block;
+  border-radius: 6px; /* 角丸にしたい場合（不要なら削除） */
+}
+
+/* 文字を少し下げて基線をそろえたいとき（微調整・任意） */
+.navbar-brand span {
+  line-height: 1;
+}
