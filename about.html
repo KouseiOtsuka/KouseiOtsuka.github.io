@@ -8,7 +8,7 @@
     <title>About | 大塚 航世（Kousei Otsuka）</title>
     <meta
       name="description"
-      content="XRセキュリティ／ユーザブルセキュリティ研究の自己紹介ページ。所属・研究テーマ・趣味など。"
+      content="東邦大学大学院 ユーザブルセキュリティ研究室所属の大塚航世です。XRセキュリティやユーザブルセキュリティに関する研究をしています。所属・研究テーマ・趣味など。"
     />
     <link rel="canonical" href="https://kouseiotsuka.github.io/about.html" />
     <!-- ▲ ページ固有 -->
@@ -24,7 +24,7 @@
     <!-- ページ固有（titleと同じ） -->
     <meta
       property="og:description"
-      content="XRセキュリティ／ユーザブルセキュリティ研究の自己紹介ページ。所属・研究テーマ・趣味など。"
+      content="東邦大学大学院 ユーザブルセキュリティ研究室所属の大塚航世です。XRセキュリティやユーザブルセキュリティに関する研究をしています。所属・研究テーマ・趣味など。"
     />
     <!-- ページ固有 -->
     <meta
@@ -365,8 +365,43 @@
       </div>
     </main>
 
-    <!-- JSは依存順にフッターで読込み -->
+    <footer class="py-5 mt-5 bg-dark text-white-50">
+      <div class="container small">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5 class="text-white">大塚 航世</h5>
+            <p class="mb-1">XRセキュリティ / ユーザブルセキュリティ</p>
+            <p class="mb-0">© <span id="year"></span> Kousei Otsuka.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a
+              class="text-white-50 me-3"
+              href="https://orcid.org/0009-0000-6154-7606"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="bi bi-box-arrow-up-right"></i> ORCID
+            </a>
+            <a
+              class="text-white-50 me-3"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-twitter-x"></i> X</a
+            >
+            <a class="text-white-50" href="#" target="_blank" rel="noopener"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/main.js" defer></script>
     <script src="assets/app.js"></script>
   </body>
 </html>
