@@ -482,3 +482,66 @@ footer {
 .navbar-brand span {
   line-height: 1;
 }
+
+/* --- hover: ふわっと持ち上がる --- */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+.hover-lift:hover,
+.hover-lift:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.25);
+}
+
+/* --- スクロール出現 --- */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.reveal-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* （任意）チルト見た目の微調整 */
+.js-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.12s ease; /* 指を離したときにスッと戻る */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift,
+  .reveal-up,
+  .js-tilt {
+    transition: none !important;
+  }
+}
+
+/* indexニュース一覧のサムネ（固定正方形） */
+.index-news-thumb {
+  width: 112px;
+  height: 112px;
+  object-fit: cover; /* はみ出しをトリミング */
+  object-position: 50% 50%;
+  display: block; /* 余白の謎のズレ防止 */
+}
+
+/* モバイルで少し小さく（任意） */
+@media (max-width: 576px) {
+  .index-news-thumb {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* index Productionのサムネ（固定正方形） */
+.index-production-thumb {
+  width: 600px;
+  height: 600px;
+  object-fit: cover; /* はみ出しをトリミング */
+  object-position: 50% 50%;
+  display: block; /* 余白の謎のズレ防止 */
+}

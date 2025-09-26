@@ -157,3 +157,71 @@
     scroller.scrollBy({ left: step, behavior: "smooth" })
   );
 })();
+
+/* ===== 軽いアニメ：reveal / tilt ===== */
+(function () {
+  document.addEventListener("DOMContentLoaded", () => {
+    const reduce = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    // --- reveal-up: 1回だけフェード＆スライドイン ---
+    if (!reduce && "IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries, obs) => {
+          for (const e of entries) {
+            if (e.isIntersecting) {
+              e.target.classList.add("is-visible");
+              obs.unobserve(e.target);
+            }
+          }
+        },
+        { rootMargin: "0px 0px -10% 0px", threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".reveal-up").forEach((el) => io.observe(el));
+    } else {
+      // 旧ブラウザなどは即時表示
+      document
+        .querySelectorAll(".reveal-up")
+        .forEach((el) => el.classList.add("is-visible"));
+    }
+
+    // --- js-tilt: マウス/指に反応して軽く傾ける（hover-liftとは併用非推奨） ---
+    if (!reduce) {
+      const els = document.querySelectorAll(".js-tilt");
+      els.forEach((el) => {
+        const max = parseFloat(el.getAttribute("data-tilt-max") || "6"); // 最大角度（度）
+        const scale = parseFloat(el.getAttribute("data-tilt-scale") || "1"); // 拡大率
+        let rect = null;
+
+        const move = (clientX, clientY) => {
+          rect = rect || el.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = (clientX - cx) / rect.width;
+          const dy = (clientY - cy) / rect.height;
+          const rx = (-dy * max).toFixed(2);
+          const ry = (dx * max).toFixed(2);
+          el.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) scale(${scale})`;
+        };
+
+        const onMouseMove = (ev) => move(ev.clientX, ev.clientY);
+        const onLeave = () => {
+          el.style.transform = "";
+          rect = null;
+        };
+        const onTouchMove = (ev) => {
+          const t = ev.touches[0];
+          if (t) move(t.clientX, t.clientY);
+        };
+
+        el.addEventListener("mousemove", onMouseMove);
+        el.addEventListener("mouseleave", onLeave);
+        el.addEventListener("touchstart", onTouchMove, { passive: true });
+        el.addEventListener("touchmove", onTouchMove, { passive: true });
+        el.addEventListener("touchend", onLeave);
+      });
+    }
+  });
+})();

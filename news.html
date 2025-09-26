@@ -105,17 +105,24 @@
       <p class="text-secondary mb-0">（作成中）最近のニュースをカードで一覧表示。クリックで詳細ページへ。</p>
     </header>
     <div class="row g-4">
+      <!-- ニュース -->
       <div class="col-md-6 col-lg-4">
-        <a class="card " data-hover-lift card-hover js-tilt reveal-up text-reset text-decoration-none h-100" href="news-detail/IeeeMetaCom.html">
+        <a class="card " data-hover-lift card-hover js-tilt reveal-up text-reset text-decoration-none h-100  href="news-detail/IeeeMetaCom.html">
           <img loading="lazy" src="https://placehold.co/800x500" class="card-img-top" alt="ニュース1">
           <div class="card-body">
-            <span class="badge rounded-pill text-bg-primary-subtle mb-2">学会</span>
+            <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
+              <span class="badge rounded-pill text-bg-primary-subtle">学会</span>
+              <!-- 追加したい分だけ増やす -->
+              <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
+            </div>
             <h3 class="h5">IEEE MetaCom 2025に採択（Poster）</h3>
             <p class="card-text small text-secondary">XRにおける聴覚刺激攻撃に関する研究が採択されました。現地でポスター発表を行います。</p>
             <div class="small text-secondary"><i class="bi bi-calendar-week"></i> 2025-05-20</div>
           </div>
         </a>
       </div>
+      <!-- ニュース -->
+       
       <div class="col-md-6 col-lg-4">
         <a class="card " data-hover-lift card-hover js-tilt reveal-up text-reset text-decoration-none h-100" href="news-detail.html">
           <img loading="lazy" src="https://placehold.co/800x500" class="card-img-top" alt="ニュース2">

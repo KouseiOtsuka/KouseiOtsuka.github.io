@@ -275,23 +275,36 @@
       <section class="py-5">
         <div class="container">
           <div class="row g-4">
-            <div class="col-lg-7">
-              <h2 class="h3 mb-3">News</h2>
+            <div class="col-lg-6">
+              <h2 class="h3 mb-3">Recent News</h2>
               <div class="list-group shadow-sm">
+                <!-- 1件目 -->
                 <a
                   href="news-detail/IeeeMetaCom.html"
                   class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                  data-hover-lift
                 >
                   <img
                     loading="lazy"
-                    src="https://placehold.co/96x96"
-                    class="rounded flex-shrink-0"
-                    alt="ニュース"
+                    src="https://placehold.co/96x96"  
+                    class="rounded flex-shrink-0 index-news-thumb"
+                    alt="IEEE MetaCom 2025"
                   />
-                  <div>
-                    <h3 class="h6 mb-1">作成中</h3>
-                    <p class="mb-1 small text-secondary">作成中</p>
-                    <span class="badge text-bg-primary-subtle">作成中</span>
+                  <div class="flex-grow-1">
+                    <!-- 複数ラベル（横並び・折り返し可） -->
+                    <div class="d-flex flex-wrap gap-2 mb-1" aria-label="ラベル">
+                      <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">学会</span>
+                      <span class="badge rounded-pill text-bg-light text-bg-success-subtle">採択</span>
+                      <!-- 必要に応じて追加 -->
+                      <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
+                    </div>
+                    <h3 class="h5 mb-1">IEEE MetaCom 2025に採択（Poster）</h3>
+                    <p class="mb-1 small text-secondary">
+                      XRにおける聴覚刺激攻撃に関する研究が採択されました。現地でポスター発表を行います。
+                    </p>
+                    <div class="small text-secondary">
+                      <i class="bi bi-calendar-week"></i> 2025-05-20
+                    </div>
                   </div>
                 </a>
                 <a
@@ -312,7 +325,35 @@
                 </a>
               </div>
             </div>
-
+            <div class="col-lg-6">
+              <h2 class="h3 mb-3">Pick up Production</h2>
+              <div class="card shadow-sm overflow-hidden js-tilt reveal-up" data-hover-lift>
+                <div class="row g-0 align-items-stretch">
+                  <div class="col-7">
+                    <div class="card-body h-100 d-flex flex-column">
+                      <h3 class="h6">作成中</h3>
+                      <p class="small text-secondary mb-3">作成中</p>
+                      <div class="mt-auto">
+                        <a href="production.html" class="btn btn-sm btn-outline-primary rounded-pill ">
+                          <i class="bi bi-box-arrow-up-right"></i> 詳しく
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-5 bg-body-tertiary ">
+                    <img
+                      loading="lazy"
+                      src="https://placehold.co/600x600"
+                      alt="Production thumbnail"
+                      class="index-production-thumb"
+                      style="object-fit: cover; height: 100%; width: 100%"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--
             <div class="col-lg-5">
               <h2 class="h3 mb-3">Pick up Publications</h2>
               <div
@@ -343,44 +384,8 @@
                   </div>
                 </div>
               </div>
+-->
 
-              <h2 class="h3 mb-3">Pick up Production</h2>
-              <div
-                class="card shadow-sm overflow-hidden js-tilt reveal-up"
-                data-hover-lift
-              >
-                <div class="row g-0 align-items-stretch">
-                  <div class="col-7">
-                    <div class="card-body h-100 d-flex flex-column">
-                      <h3 class="h6">作成中</h3>
-                      <p class="small text-secondary mb-3">作成中</p>
-                      <div class="mt-auto">
-                        <a
-                          href="production.html"
-                          class="btn btn-sm btn-outline-primary rounded-pill"
-                          ><i class="bi bi-box-arrow-up-right"></i> 詳しく</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-5 bg-body-tertiary">
-                    <img
-                      loading="lazy"
-                      src="https://placehold.co/600x600"
-                      alt="Production thumbnail"
-                      style="object-fit: cover; height: 100%; width: 100%"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /col-lg-5 -->
-          </div>
-          <!-- /row -->
-        </div>
-        <!-- /container -->
-      </section>
-    </main>
 
     <footer class="py-5 mt-5 bg-dark text-white-50">
       <div class="container small">
