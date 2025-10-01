@@ -546,3 +546,26 @@ footer {
   object-position: 50% 50%;
   display: block; /* 余白の謎のズレ防止 */
 }
+
+/* ===== css2025.html のギャラリー専用：高さ統一＆比率維持 ===== */
+.gallery--fixed-height .photo-rail-item{
+  /* 画像の横幅に合わせて可変。固定幅指定を上書き */
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.gallery--fixed-height .gallery-img{
+  height: 300px;   /* ← 統一したい高さ。お好みで調整 */
+  width: auto;     /* 横は画像の比率通りに可変 */
+  display: block;
+  object-fit: contain;  /* トリミングせず、比率維持（余白OK） */
+}
+
+/* 画面幅で高さを可変に（任意） */
+@media (max-width: 576px){
+  .gallery--fixed-height .gallery-img{ height: 220px; }
+}
+@media (min-width: 992px){
+  .gallery--fixed-height .gallery-img{ height: 360px; }
+}
+

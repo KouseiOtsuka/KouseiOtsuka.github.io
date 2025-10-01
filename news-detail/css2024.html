@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ▼ ページ固有 -->
+    <title>
+      CSS2024参加 | 大塚 航世（Kousei Otsuka）東邦大
+      ユーザブルセキュリティ研究室
+    </title>
+    <meta name="description" content="" />
+    <link rel="canonical" href="https://kouseiotsuka.github.io/news-detail/css2024.html" />
+    <!-- ▲ ページ固有 -->
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kousei Otsuka" />
+    <meta
+      property="og:title"
+      content="css2024参加 | 大塚 航世（Kousei Otsuka）"
+    />
+    <meta property="og:description" content="" />
+    <meta
+      property="og:url"
+      content="https://kouseiotsuka.github.io/news-detail/css2024.html"
+    />
+    <!-- ▲ ページ固有 -->
+    <meta
+      property="og:image"
+      content="https://kouseiotsuka.github.io/images/favicon.png"
+    />
+
+    <!-- テーマ色など（共通） -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- CSS / Icons（共通） -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/styles.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  </head>
+
+  <body class="bg-black text-light" data-bs-theme="dark">
+    <header
+      class="navbar navbar-expand-lg navbar-dark bg-gradient-primary sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center gap-2"
+          href="../index.html"
+        >
+          <img
+            src="../images/favicon.png"
+            alt=""
+            class="brand-icon"
+            width="28"
+            height="28"
+            draggable="false"
+          />
+          <span>Kousei Otsuka</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNav"
+          aria-controls="offcanvasNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasNav"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">メニュー</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../publication.html">Publication</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../production.html">Production</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contact.html">Contact</a>
+              </li>
+              <li class="nav-item ms-lg-3">
+                <a
+                  class="btn btn-sm btn-outline-light rounded-pill"
+                  href="https://github.com/KouseiOtsuka"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="small">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../news.html">News</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              CSS2024に参加、発表
+            </li>
+          </ol>
+        </nav>
+
+        <!-- ▼ microdataを付与して後段の自動抽出がしやすい構造に -->
+        <article
+          class="mx-auto"
+          style="max-width: 640px"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <header class="mb-4">
+            <!-- タイトル -->
+            <h1 id="news-title" class="h2 fw-bold" itemprop="headline">
+              CSS2024に参加、発表
+            </h1>
+
+            <!-- 変更後：複数ラベル -->
+            <div id="news-labels" class="d-flex flex-wrap gap-2 mb-2">
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">国内会議</span>
+              <!-- 追加したい分だけ増やす -->
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">受賞</span>
+              <!-- <span class="badge rounded-pill text-bg-success-subtle" itemprop="articleSection">採択</span> -->
+            </div>
+
+            <!-- 日付・場所 -->
+            <div class="text-secondary small">
+              <i class="bi bi-calendar-week"></i>
+              <time
+                id="news-date"
+                datetime="yyyy-mm-dd"
+                itemprop="datePublished"
+                >2024-10-22~25</time
+              >
+              ・ <i class="bi bi-geo-alt"></i>
+              <span id="news-place" itemprop="contentLocation">神戸国際会議場, 神戸</span>
+            </div>
+          </header>
+
+          <!-- サムネイル -->
+          <img
+            id="news-thumb"
+            itemprop="image"
+            loading="lazy"
+            src="images/css2024/css2024-tham.jpg"
+            class="img-fluid rounded-3 shadow-sm mb-3"
+            alt="サムネイル"
+          />
+
+          <!-- ★ 追加：一言まとめ（サムネ直下） -->
+          <p id="news-summary" class="lead mb-4" itemprop="description">
+            CSS2024にてデモンストレーション発表、最優秀デモンストレーション章を獲得！
+          </p>
+
+          <!-- 本文 -->
+          <p itemprop="articleBody">「VR/AR行動ハックデモ：視聴覚刺激によるコントロール」という名目で、シンポジウムにてデモンストレーション発表を行いました。本デモは、VR（仮想現実）やMR（複合現実）の環境下において、視覚や聴覚の刺激によってユーザーの思考や行動がどのように操作される可能性があるかを体験していただくものです。<br>
+            私含め5人の説明員で対応しましたが、セッション時間中は多くの方に体験いただき、非常に好評でした。<br>
+            さらに、本デモは最優秀デモンストレーション賞を受賞することができました。多くの方に関心を持っていただき、テーマの重要性を伝えることができたと思います。<br>
+            本デモでは、VRでテトリス風のゲームをプレイ中のユーザーに対し、以下のような体験をしていただきました。<br>
+            <ul>
+              <li>視覚刺激による妨害：画面上に偽の注意喚起のダイアログを表示し、テトリスゲームの視覚的妨害や混乱を誘発させる。</li>
+              <li>ブロックの偽装：正規ブロックの上から偽物ブロックを被せて、誤った判断をさせる。</li>
+              <li>聴覚刺激による注意の誘導：立体音響効果を用いて、注意を誘導したり、頭の向きを操作する。</li>
+            </ul>
+          </p>
+          <p itemprop="articleBody">また、キャンドルスターセッション（CSS×2.0）にも参加しました。<br>
+            キャンドルスターセッションは、ライトトーキングセッションで、「硬い」内容ではなく、ユーモアあふれる「柔らかい」発表内容がメインのセッションです。<br>
+            先輩と一緒に参加し、見事一等星を獲得しました！
+          </p>
+
+          <!-- 写真ギャラリー（差し替え） -->
+          <section class="mt-4">
+            <h2 class="h6 mb-2">Photos</h2>
+            <!-- ← スコープ用クラスを付与 -->
+            <div class="photo-rail gallery--fixed-height">
+              <div class="photo-rail-track">
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/css2024/css2024-02.jpg"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/css2024/css2024-03.jpg"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/css2024/css2024-04.png"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <a class="btn btn-outline-primary rounded-pill" href="../news.html">
+            <i class="bi bi-arrow-left"></i> 一覧へ戻る
+          </a>
+        </article>
+      </div>
+    </main>
+
+    <footer class="py-5 mt-5 bg-dark text-white-50">
+      <div class="container small">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5 class="text-white">大塚 航世</h5>
+            <p class="mb-1">XRセキュリティ / ユーザブルセキュリティ</p>
+            <p class="mb-0">© <span id="year"></span> Kousei Otsuka.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a
+              class="text-white-50 me-3"
+              href="https://orcid.org/0009-0000-6154-7606"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="bi bi-box-arrow-up-right"></i> ORCID
+            </a>
+            <a
+              class="text-white-50 me-3"
+              href="https://x.com/KouseiOtsuka"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-twitter-x"></i> X</a
+            >
+            <a
+              class="text-white-50"
+              href="https://github.com/KouseiOtsuka"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/main.js" defer></script>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>
