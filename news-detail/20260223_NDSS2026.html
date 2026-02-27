@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ▼ ページ固有 -->
+    <title>
+      NDSS2026参加 | 大塚 航世（Kousei Otsuka）東邦大
+      ユーザブルセキュリティ研究室
+    </title>
+    <meta name="description" content="" />
+    <link rel="canonical" href="https://kouseiotsuka.github.io/news-detail/20241022_css2024.html" />
+    <!-- ▲ ページ固有 -->
+
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kousei Otsuka" />
+    <meta
+      property="og:title"
+      content="css2024参加 | 大塚 航世（Kousei Otsuka）"
+    />
+    <meta property="og:description" content="" />
+    <meta
+      property="og:url"
+      content="https://kouseiotsuka.github.io/news-detail/20251026_css2025.html"
+    />
+    <!-- ▲ ページ固有 -->
+    <meta
+      property="og:image"
+      content="https://kouseiotsuka.github.io/images/favicon.png"
+    />
+
+    <!-- テーマ色など（共通） -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- CSS / Icons（共通） -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/styles.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+  </head>
+
+  <body class="bg-black text-light" data-bs-theme="dark">
+    <header
+      class="navbar navbar-expand-lg navbar-dark bg-gradient-primary sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center gap-2"
+          href="../index.html"
+        >
+          <img
+            src="../images/favicon.png"
+            alt=""
+            class="brand-icon"
+            width="28"
+            height="28"
+            draggable="false"
+          />
+          <span>Kousei Otsuka</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNav"
+          aria-controls="offcanvasNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasNav"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">メニュー</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../publication.html">Publication</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../production.html">Production</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contact.html">Contact</a>
+              </li>
+              <li class="nav-item ms-lg-3">
+                <a
+                  class="btn btn-sm btn-outline-light rounded-pill"
+                  href="https://github.com/KouseiOtsuka"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+        <nav aria-label="breadcrumb" class="small">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../news.html">News</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              NDSS2026に参加、発表
+            </li>
+          </ol>
+        </nav>
+
+        <!-- ▼ microdataを付与して後段の自動抽出がしやすい構造に -->
+        <article
+          class="mx-auto"
+          style="max-width: 640px"
+          itemscope
+          itemtype="https://schema.org/NewsArticle"
+        >
+          <header class="mb-4">
+            <!-- タイトル -->
+            <h1 id="news-title" class="h2 fw-bold" itemprop="headline">
+              NDSS2026に参加、発表
+            </h1>
+
+            <!-- 変更後：複数ラベル -->
+            <div id="news-labels" class="d-flex flex-wrap gap-2 mb-2">
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">国際会議</span>
+              <!-- <span class="badge rounded-pill text-bg-success-subtle" itemprop="articleSection">採択</span> -->
+            </div>
+
+            <!-- 日付・場所 -->
+            <div class="text-secondary small">
+              <i class="bi bi-calendar-week"></i>
+              <time
+                id="news-date"
+                datetime="yyyy-mm-dd"
+                itemprop="datePublished"
+                >2026-02-23 ~ 2026-02-27</time
+              >
+              ・ <i class="bi bi-geo-alt"></i>
+              <span id="news-place" itemprop="contentLocation">Wyndham San Diego Bayside, San Diego</span>
+            </div>
+          </header>
+
+          <!-- サムネイル -->
+          <img
+            id="news-thumb"
+            itemprop="image"
+            loading="lazy"
+            src="images/NDSS2026/NDSS2026tham.jpg"
+            class="img-fluid rounded-3 shadow-sm mb-3"
+            alt="サムネイル"
+          />
+
+          <!-- ★ 追加：一言まとめ（サムネ直下） -->
+          <p id="news-summary" class="lead mb-4" itemprop="description">
+            NDSS2026に参加、ポスター発表！
+          </p>
+
+          <!-- 本文 -->
+            <p itemprop="articleBody">
+            Network and Distributed System Security (NDSS) Symposium は、インターネットおよび分散システムのセキュリティを扱う難関国際会議の一つです。
+            私は本会議にポスターとして投稿し、「Poster: Auditory Viewpoint Manipulation Attacks in VR: An Empirical Study」を発表しました。
+            本研究は、空間音響（spatial audio）を悪用してVRユーザの視点を操作する攻撃（Auditory Viewpoint Manipulation Attack）について、修士課程で取り組んできた実証研究をネットワークセキュリティ視点でまとめたものです。
+            </p>
+
+            <p>
+            英語でのポスター発表は今回が初めてで、スライドを用いた発表とは異なり、相手の関心や質問に合わせてその場で説明を組み立てる「臨機応変さ」が求められました。
+            海外の研究者の方々と当該テーマについて議論する機会も初めてでしたが、研究の位置づけや今後の発展可能性について多くの示唆を得られ、非常に有意義な経験になりました。
+            今回のフィードバックは、今後の論文投稿や論文誌への展開にしっかり生かしていきたいと思います。
+            </p>
+
+            <p>
+            また今回は、私・指導教員・同期のM2の3名での出張となりました。
+            金岡研究室では、アメリカのように物価が高い地域では宿泊費が支給額を大きく上回ってしまうことがあるため、Airbnb を利用することも多いです。
+            先生の料理を囲みながら、サンディエゴの海を眺める時間は格別でした。
+            </p>
+
+            <p>
+            私は博士課程進学のため研究室に残りますが、同期のM2とは今回が最後の出張となりました。
+            研究活動としても思い出としても、印象に残る良い旅になったと思います。
+            </p>
+
+  
+
+          <!-- 写真ギャラリー（差し替え） -->
+          <section class="mt-4">
+            <h2 class="h6 mb-2">Photos</h2>
+            <!-- ← スコープ用クラスを付与 -->
+            <div class="photo-rail gallery--fixed-height">
+              <div class="photo-rail-track">
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/NDSS2026/NDSS2026-01.jpg"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/NDSS2026/NDSS2026-02.jpg"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/NDSS2026/NDSS2026-03.jpg"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/NDSS2026/NDSS2026-04.jpg"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/NDSS2026/NDSS2026-05.jpg"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/NDSS2026/NDSS2026-06.jpg"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+                <figure class="mb-0 photo-rail-item">
+                  <img
+                    src="images/NDSS2026/NDSS2026-07.jpg"
+                    class="gallery-img rounded-3 shadow-sm"
+                    alt="…"
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </figure>
+              </div>
+            </div>
+          </section>
+
+          <a class="btn btn-outline-primary rounded-pill" href="../news.html">
+            <i class="bi bi-arrow-left"></i> 一覧へ戻る
+          </a>
+        </article>
+      </div>
+    </main>
+
+    <footer class="py-5 mt-5 bg-dark text-white-50">
+      <div class="container small">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5 class="text-white">大塚 航世</h5>
+            <p class="mb-1">XRセキュリティ / ユーザブルセキュリティ</p>
+            <p class="mb-0">© <span id="year"></span> Kousei Otsuka.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a
+              class="text-white-50 me-3"
+              href="https://orcid.org/0009-0000-6154-7606"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="bi bi-box-arrow-up-right"></i> ORCID
+            </a>
+            <a
+              class="text-white-50 me-3"
+              href="https://x.com/KouseiOtsuka"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-twitter-x"></i> X</a
+            >
+            <a
+              class="text-white-50"
+              href="https://github.com/KouseiOtsuka"
+              target="_blank"
+              rel="noopener"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/main.js" defer></script>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>
