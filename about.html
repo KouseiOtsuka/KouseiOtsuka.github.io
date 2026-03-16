@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
@@ -9,10 +9,7 @@
       About | 大塚 航世（Kousei Otsuka）東邦大
       ユーザブルセキュリティ(金岡)研究室
     </title>
-    <meta
-      name="description"
-      content="東邦大学大学院 ユーザブルセキュリティ研究室所属の大塚航世です。XRセキュリティやユーザブルセキュリティに関する研究をしています。自己紹介・趣味など。"
-    />
+    <meta name="description" content="自己紹介・趣味など。" />
     <link rel="canonical" href="https://kouseiotsuka.github.io/about.html" />
     <!-- ▲ ページ固有 -->
 
@@ -20,10 +17,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Kousei Otsuka" />
     <meta property="og:title" content="About | 大塚 航世（Kousei Otsuka）" />
-    <meta
-      property="og:description"
-      content="東邦大学大学院 ユーザブルセキュリティ研究室所属の大塚航世です。XRセキュリティやユーザブルセキュリティに関する研究をしています。自己紹介・趣味など。"
-    />
+    <meta property="og:description" content="自己紹介・趣味など。" />
     <meta
       property="og:url"
       content="https://kouseiotsuka.github.io/about.html"
@@ -291,35 +285,135 @@
             <section class="card shadow-sm h-100">
               <div class="card-body">
                 <h2 class="h5">研究テーマ</h2>
-                <p class="mb-2">
+
+                <!-- まずは要約だけ表示 -->
+                <p class="mb-3">
                   XR技術における、人の認知・知覚に関わるリスクとセキュリティの研究を行っています。<br />
                   ARやVRに代表されるXRは、メタバースやデジタルツイン等の概念を支える中核技術であり、物理世界を超えた体験価値を提供します。<br />
-                  一方で、XRがもたらす高い没入感・実在感はユーザの知覚に強く作用し、攻撃者がユーザの「認識」や「判断」を意図的に誘導・操作する余地を生みます。
-                  例えば、ユーザの移動方向や注意を攻撃者が意図的に制御したり、思考を誘導してフィッシングサイトへアクセスさせたりする、といったリスクが考えられます。<br />
-                  私は、こうした知覚操作に起因するリスクを明確化し、安全にXRを利用するための評価手法・対策の検討に取り組んでいます。<br />
-                  修士号取得後も同研究室にて博士後期課程学生として研究を継続し、XR環境における認知・知覚リスクの解明と評価手法の確立に取り組みたいと考えています。<br />
-                  <br />
-                  学士研究では、XR環境下において聴覚刺激が引き起こし得るリスクを対象に、人間の聴覚器官の特性および刺激特性を踏まえて、包括的に整理・体系化しました。
-                  <a
-                    class="ms-2 text-decoration-none"
-                    href="https://ieeexplore.ieee.org/abstract/document/11190249"
-                    target="_blank"
-                    rel="noopener"
-                    ><i class="bi bi-box-arrow-up-right"></i> </a
-                  ><br />
-                  <br />
-                  修士研究では、学士研究で得られた知見を活かし、聴覚刺激を悪用した視点操作攻撃（Auditory
-                  Viewpoint Manipulation Attack:
-                  AVMA）を対象に、ユーザスタディを通じて影響とリスクを分析・評価しています。<br />
-                  <br />
-                  研究活動では研究室内にとどまらず、IoRプロジェクトチームのメンバーや、RAとして従事しているNICTの研究員の方々をはじめ、外部の研究者とも積極的に議論を行っています。<br />
-                  また、国内外を問わず学会への投稿・参加を継続的に行い、知見の発信とフィードバックの獲得に努めています。<br />
+                  一方で、XRがもたらす高い没入感・実在感はユーザの知覚に強く作用し、攻撃者がユーザの認識や判断を意図的に誘導・操作する余地を生みます。<br />
+                  私は、こうした知覚操作に起因するリスクを明確化し、安全にXRを利用するための評価手法・対策の検討に取り組んでいます。
                 </p>
+
+                <p class="mb-3">
+                  学部および修士課程では、XR環境下における聴覚刺激に着目し、空間音響などの技術が引き起こし得る脅威について、人間の聴覚器官の特性や刺激の性質を踏まえて整理するとともに、ユーザスタディを通じて実証的に評価しました。<br />
+                </p>
+
+                <!-- 開閉ボタン -->
+                <p class="mb-3">
+                  <a
+                    class="btn btn-outline-secondary btn-sm"
+                    data-bs-toggle="collapse"
+                    href="#researchDetail"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="researchDetail"
+                  >
+                    詳しく見る
+                  </a>
+                </p>
+
+                <!-- 開いたときに見せる詳細 -->
+                <div class="collapse" id="researchDetail">
+                  <div class="border-top pt-3">
+                    <div class="mb-4">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        研究背景
+                      </h3>
+                      <p class="mb-2">
+                        XR技術は、これまでゲームやエンターテインメント分野での活用が目立っていましたが、近年では医療や軍事など、高い信頼性が求められる分野にも応用が広がっています。
+                        こうした利用範囲の拡大に伴い、XR環境におけるセキュリティリスクへの対策の重要性も高まっています。
+                      </p>
+                      <p class="mb-2">
+                        XR技術の特徴は、視覚や聴覚を通じてユーザの認知や知覚に直接働きかけ、高い没入感や実在感を生み出せる点にあります。
+                        一方で、この特性は、ユーザの認識や判断、行動に影響を与える新たな攻撃に悪用される可能性もあります。
+                        実際に、思考の誘導、身体的危害、プライバシ侵害といったリスクにつながる可能性が指摘されています。
+                        従来のPCやスマートフォンにおけるサイバーセキュリティでは、主に情報資産や機器そのものを守ることが中心でしたが、XR環境では「人の認知や知覚」そのものが守るべき対象になり得る点が大きな特徴です。
+                      </p>
+                      <p class="mb-2">
+                        こうしたXR特有のリスクや攻撃に関する議論は進みつつあるものの、その多くは視覚刺激を対象としたものです。
+                        一方で、聴覚刺激によるリスクや攻撃についての議論や実証的な研究は限られています。
+                        そこで私は、XR環境下における聴覚刺激に着目し、空間音響などの技術がユーザの認知や行動にどのような影響を与え得るのかを研究しています。
+                      </p>  
+                    </div>
+                    <div class="mb-4">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        研究課題
+                      </h3>
+                      <p class="mb-2">
+                        本研究には、主に二つの課題があります。
+                        第一に、XR環境下において聴覚刺激がもたらすリスクや攻撃可能性に関する議論がまだ限られており、どのような脅威が成立し得るのか、またそれがユーザにどのような影響を及ぼすのかが十分に明らかになっていない点です。
+                        視覚刺激を対象とした研究は比較的進んでいる一方で、聴覚刺激については、人間の聴覚特性や空間音響技術の影響を踏まえた検討が不足しています。
+                      </p>
+                      <p class="mb-2">
+                        第二に、こうしたリスクを検証するための実験設計や評価手法が十分に確立されていない点です。
+                        XR環境における認知や知覚への影響は、単純なシステム評価だけでは捉えにくく、ユーザの主観的な認識や行動変化を含めて評価する必要があります。
+                        そのため、どのような刺激を、どのような状況で提示し、何を指標として評価するかという実験設計そのものが重要な課題となっています。
+                      </p>
+                    </div>
+
+                    <div class="mb-4">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        取り組んだこと
+                      </h3>
+                      <p class="mb-2">
+                        これらの課題に対し、私は学部研究および修士研究を通じて、XR環境下における聴覚刺激のリスク解明と、その実証評価に取り組みました。
+                      </p>
+                      <p class="mb-2">
+                        まず、学部研究では、XR環境下において聴覚刺激がもたらし得るリスクに着目し、人間の聴覚器官の特性や刺激の特徴を踏まえながら、想定される脅威や攻撃の可能性を整理、体系化しました。
+                        これにより、従来は十分に検討されてこなかった聴覚刺激が、XR環境においてユーザの認知や行動に影響を与え得ることを明確化しました。<a class="ms-2 text-decoration-none" href="https://ieeexplore.ieee.org/abstract/document/11190249" target="_blank" rel="noopener"><i class="bi bi-file-earmark"></i> </a>
+                      </p>
+                      <p class="mb-2">
+                        修士研究では、学部研究で得た知見を基に、アプリや配布コンテンツへのサプライチェーン侵入を通じて不特定多数のユーザを標的としうる、聴覚刺激を悪用した視点操作攻撃を対象として、VRゲーム中のユーザに方向性を持つ音刺激を提示するユーザスタディを設計、実施し、注意や視点、認識への影響を実証的に評価しました。
+                        特に、VRヘッドセット内蔵スピーカーから物理環境で発生しうる音を提示し、それを物理空間由来の音と誤帰属させることで、ユーザの注意や頭部方向を誘導しうることを検証しました。<a class="ms-2 text-decoration-none" href="https://www.ndss-symposium.org/wp-content/uploads/ndss26-poster-5.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark"></i> </a>
+                      </p>
+                    </div>
+
+                    <div class="mb-4">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        得られた知見
+                      </h3>
+                      <p class="mb-2">
+                        実験の結果、XR環境における聴覚刺激がユーザの注意や視点、認識に影響を与え得ることを示してきました。
+                        特に、VRヘッドセットから提示される方向性を持つ音刺激によって、ユーザの注意や頭部方向が変化し得ることを確認しており、聴覚刺激がセキュリティおよびプライバシー上のリスクにつながる可能性を明らかにしてきました。
+                      </p>
+                      <p class="mb-2">
+                        また、こうした聴覚刺激は自然に作用しやすく、ユーザに違和感を与えた場合でも、その原因は攻撃ではなく、効果音やデバイスの不具合といった内的要因に帰属される傾向が見られました。
+                        これは、攻撃が明確に認識されないまま潜在しうることを示しており、防御の必要性を示す重要な知見です。
+                      </p>
+                      <p class="mb-2">
+                        一方で、誘導効果の程度は、提示音と物理環境との整合性などの条件に依存することも分かりました。
+                        このことは、聴覚刺激攻撃が成立する条件と抑制される条件の双方を明らかにし、それらを踏まえた防御手法を設計、評価する必要があることを示しています。
+                      </p>
+                    </div>
+                    <div class="mb-0">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        今後の展望
+                      </h3>
+                      <p class="mb-2">
+                        本研究を通じて、XR環境下における聴覚刺激攻撃は、ユーザの注意や認知、行動に影響を与えうることが明らかになりました。
+                        今後は、本研究で得られた知見を基に、その対策手法の研究へと発展させていきます。
+                      </p>
+                      <p class="mb-2">
+                        対策においては、本研究で扱った攻撃者モデルに限らず、聴覚刺激を用いた多様な攻撃への対応可能性を視野に入れながら、XR特有の没入感を損なわない対策の検討、実装、評価を進めていきます。
+                        これにより、安全で安心なXR環境の実現に貢献したいと考えています。
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           </div>
         </div>
-
         <!-- 下段：趣味（全幅 2カラム） -->
         <div class="row g-4 mt-1">
           <div class="col-12">
@@ -413,5 +507,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/main.js" defer></script>
     <script src="assets/app.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.hash === "#researchDetail") {
+          const target = document.querySelector("#researchDetail");
+          if (target) {
+            new bootstrap.Collapse(target, { toggle: true });
+            setTimeout(() => {
+              const offset = 100;
+              const top =
+                target.getBoundingClientRect().top + window.pageYOffset - offset;
+              window.scrollTo({ top, behavior: "smooth" });
+            }, 200);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
