@@ -299,22 +299,50 @@
                 </p>
 
                 <!-- 開閉ボタン -->
-                <p class="mb-3">
-                  <a
+                <div class="d-flex flex-wrap gap-2 mb-3">
+
+                  <button
                     class="btn btn-outline-secondary btn-sm"
+                    type="button"
                     data-bs-toggle="collapse"
-                    href="#researchDetail"
-                    role="button"
+                    data-bs-target="#researchDetail"
                     aria-expanded="false"
                     aria-controls="researchDetail"
                   >
-                    詳しく見る
-                  </a>
-                </p>
+                    VR環境における聴覚刺激攻撃の実証的研究
+                  </button>
+
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#audioDefenseDetail"
+                    aria-expanded="false"
+                    aria-controls="audioDefenseDetail"
+                  >
+                    不審な音提示の検知・防御（In Progress）
+                  </button>
+
+                  <button
+                    class="btn btn-outline-secondary btn-sm"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#xAttackPrimitiveDetail"
+                    aria-expanded="false"
+                    aria-controls="xAttackPrimitiveDetail"
+                  >
+                    XR攻撃のプリミティブ分析（In Progress）
+                  </button>
+
+
+                </div>
 
                 <!-- 開いたときに見せる詳細 -->
                 <div class="collapse" id="researchDetail">
                   <div class="border-top pt-3">
+                    <div class="mb-3">
+                      <h2 class="h5 fw-bold mb-2">VR環境における聴覚刺激攻撃の実証的研究</h2>
+                    </div>
                     <div class="mb-4">
                       <h3
                         class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
@@ -354,7 +382,6 @@
                         そのため、どのような刺激を、どのような状況で提示し、何を指標として評価するかという実験設計そのものが重要な課題となっています。
                       </p>
                     </div>
-
                     <div class="mb-4">
                       <h3
                         class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
@@ -373,7 +400,6 @@
                         特に、VRヘッドセット内蔵スピーカーから物理環境で発生しうる音を提示し、それを物理空間由来の音と誤帰属させることで、ユーザの注意や頭部方向を誘導しうることを検証しました。<a class="ms-2 text-decoration-none" href="https://www.ndss-symposium.org/wp-content/uploads/ndss26-poster-5.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark"></i> </a>
                       </p>
                     </div>
-
                     <div class="mb-4">
                       <h3
                         class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
@@ -385,8 +411,8 @@
                         特に、VRヘッドセットから提示される方向性を持つ音刺激によって、ユーザの注意や頭部方向が変化し得ることを確認しており、聴覚刺激がセキュリティおよびプライバシー上のリスクにつながる可能性を明らかにしてきました。
                       </p>
                       <p class="mb-2">
-                        また、こうした聴覚刺激は自然に作用しやすく、ユーザに違和感を与えた場合でも、その原因は攻撃ではなく、効果音やデバイスの不具合といった内的要因に帰属される傾向が見られました。
-                        これは、攻撃が明確に認識されないまま潜在しうることを示しており、防御の必要性を示す重要な知見です。
+                        また、特に興味深かったのは、これらの攻撃として提示した聴覚刺激は、ユーザに違和感を与えた場合でも、その原因は攻撃ではなく、効果音やデバイスの不具合といった内的要因に帰属される傾向が見られました。
+                        これは、攻撃が明確に認識されないまま潜在しうることを示しており、ユーザの主観的な検知に頼らない防御の必要性を示す重要な知見です。
                       </p>
                       <p class="mb-2">
                         一方で、誘導効果の程度は、提示音と物理環境との整合性などの条件に依存することも分かりました。
@@ -410,6 +436,126 @@
                     </div>
                   </div>
                 </div>
+
+                                <!-- 開いたときに見せる詳細：不審な音提示の検知・防御 -->
+                <div class="collapse" id="audioDefenseDetail">
+                  <div class="border-top pt-3">
+                    <div class="mb-3">
+                      <h2 class="h5 fw-bold mb-2">不審な音提示の検知・防御</h2>
+                    </div>
+                    <div class="mb-4">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        研究背景
+                      </h3>
+                      <p class="mb-2">
+                        VR環境では、音は単なる効果音や演出にとどまらず、ユーザの注意、没入感、空間認識を支える重要な要素です。
+                        しかしながら、これらの音を不正に提示することで、ユーザの認識や行動を誘導し、セキュリティやプライバシーのリスクにつながる可能性があります。
+                        そのため、不正な聴覚刺激提示を検知し、防御する技術の開発が求められています。
+                      </p>
+
+                      </p>
+                    </div>
+                    <div class="mb-4">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        課題
+                      </h3>
+                      <p class="mb-2">
+                        本研究分野には大きく3つの課題が存在しています。
+                      </p>
+                      <p class="mb-2">
+                        1つ目に、従来のコンピューティング環境では機器やシステム、データをセキュリティの対象としてきましたが、XR環境では「人の認知や知覚」そのものが攻撃の対象となり得る点が大きな特徴であり、これをどのように技術的に検知し、防御するかという課題があります。
+                        従来のセキュリティモデルや防御手法は、主にシステムやデータの保護を目的として設計されているため、XR環境に適した防御するための新たなモデルや手法が必要になります。
+                      </p>
+                      <p class="mb-2">
+                        2つ目に、私がこれまでに行ってきた研究を通じて、聴覚刺激攻撃は、ユーザに違和感を与えた場合でも、その原因は攻撃ではなく、効果音やデバイスの不具合といった内的要因に帰属される傾向が見られました。
+                        そのため、ユーザの主観的な検知に頼らない防御の必要性が示されており、どのような技術的アプローチで攻撃を検知し、防御するかという課題があります。
+                      </p>
+                      <p class="mb-2">
+                        3つ目に、XR環境における聴覚刺激に関する議論は不十分であり、その防御原理についても十分に検討されていない点です。
+                      </p>
+                      <p class="mb-2">
+                      </p>
+                    </div>
+                    <div class="mb-0">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        提案する検知手法
+                      </h3>
+                      <p class="mb-2">
+                        不審な音提示を検知する方法として、音声データそのものの真正性を確認することが考えられます。
+                        しかし、単純に音声データ単体の真正性を検証するだけでは、開発者が用意した正規の音声データや音源が、本来とは異なる文脈で悪用された場合を検知できません。
+                      </p>
+
+                      <p class="mb-2">
+                        そこで私は、音声データそのものではなく、音がどのように提示されているかという「音提示の振る舞い」に着目しました。
+                        例えば、どの音源から再生されているか、どの位置で鳴っているか、どの程度の音量で提示されているか、空間音響として提示されているか、頭部方向に追従しているかといった情報を事前に登録し、実行時の音提示と照合することで、不審な音提示を検知できると考えています。
+                      </p>
+
+                      <p class="mb-2">
+                        しかし、VR空間で発生するすべての音提示に対して、個別に詳細な振る舞いを登録することは、開発者の負担が大きく、現実的ではありません。
+                        そこで、本研究では音の役割ごとの振る舞いに着目します。
+                        VR環境で用いられる音には、BGM、環境音、キャラクタ音、通知音、効果音などの役割があり、それぞれ正当とみなされる提示方法が異なります。
+                      </p>
+                      <p class="mb-2">
+                        例えば、BGMは場面全体の雰囲気を作るために提示されることが多く、特定の物体位置から突然大きな音量で再生される場合には不自然な提示と考えられます。
+                        一方で、環境音は空間内の位置や周囲の状況と対応していることが重要であり、音源の位置や再生タイミングが環境と整合しているかを確認する必要があります。
+                        このように、音の役割ごとに正当な振る舞いを整理することで、開発者がすべての音提示を細かく指定しなくても、不審な音提示を検知できる可能性があります。
+                      </p>
+                      <p class="mb-2">
+                        本研究では、音の役割ごとの正当な振る舞いを整理し、実際のVRアプリケーションにおいて不審な音提示を検知するシステムを実装し、検知制度や運用可能性を評価することで、提案手法の有効性を検証します。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 開いたときに見せる詳細：XR攻撃のプリミティブ分析 -->
+                <div class="collapse" id="xAttackPrimitiveDetail">
+                  <div class="border-top pt-3">
+                    <div class="mb-3">
+                      <h2 class="h5 fw-bold mb-2">XR攻撃のプリミティブ分析</h2>
+                    </div>
+                    <div class="mb-4">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        研究概要
+                      </h3>
+                      <p class="mb-2">
+                        本研究では、XR環境で報告されている攻撃を、攻撃を成立させる最小単位の操作に分解し、どのような機能やAPIが悪用され得るのかを整理しています。
+                        例えば、オブジェクトの移動、非表示化、音源の追加、提示位置の変更、外部通信などの操作をプリミティブとして捉え、既存の攻撃がどのような組み合わせで構成されるのかを分析します。
+                      </p>
+                    </div>
+                    <div class="mb-4">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        研究の位置づけ
+                      </h3>
+                      <p class="mb-2">
+                        XR攻撃に関する先行研究では、攻撃の影響や脅威シナリオが議論される一方で、それらが具体的にどのような実装上の操作によって成立するのかが十分に整理されていない場合があります。
+                        本研究では、攻撃を実装可能な操作レベルで分析することで、XRアプリケーションの攻撃面をより具体的に把握することを目指しています。
+                      </p>
+                    </div>
+                    <div class="mb-0">
+                      <h3
+                        class="border-start border-4 ps-3 mb-3 fs-6 fw-semibold"
+                      >
+                        今後の展開
+                      </h3>
+                      <p class="mb-2">
+                        今後は、UnityやMeta Quest環境を中心に、実際に各プリミティブがどの程度実装可能であるかを検証し、XRアプリケーション開発における安全性評価や対策設計に役立つ知見として整理していきます。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+
               </div>
             </section>
           </div>
@@ -509,10 +655,33 @@
     <script src="assets/app.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        if (window.location.hash === "#researchDetail") {
-          const target = document.querySelector("#researchDetail");
+        const targetIds = [
+          "#researchDetail",
+          "#auditoryRiskDetail",
+          "#xAttackPrimitiveDetail",
+          "#audioDefenseDetail",
+        ];
+
+        const targets = targetIds
+          .map((id) => document.querySelector(id))
+          .filter(Boolean);
+
+        // いずれかの研究詳細を開くとき、他の研究詳細は閉じる
+        targets.forEach((target) => {
+          target.addEventListener("show.bs.collapse", function () {
+            targets.forEach((otherTarget) => {
+              if (otherTarget !== target && otherTarget.classList.contains("show")) {
+                bootstrap.Collapse.getOrCreateInstance(otherTarget).hide();
+              }
+            });
+          });
+        });
+
+        // URL末尾に #researchDetail などが付いている場合は、その詳細だけを開く
+        if (targetIds.includes(window.location.hash)) {
+          const target = document.querySelector(window.location.hash);
           if (target) {
-            new bootstrap.Collapse(target, { toggle: true });
+            bootstrap.Collapse.getOrCreateInstance(target).show();
             setTimeout(() => {
               const offset = 100;
               const top =
