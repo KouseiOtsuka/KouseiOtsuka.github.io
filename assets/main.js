@@ -1,7 +1,18 @@
 (() => {
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // ── Active nav link ──────────────────────────────────────────
+  // ── Scroll progress bar ───────────────────────────────────────
+  const progressBar = document.createElement("div");
+  progressBar.className = "scroll-progress";
+  document.body.prepend(progressBar);
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = max > 0 ? `${(window.scrollY / max) * 100}%` : "0%";
+  };
+  updateProgress();
+  window.addEventListener("scroll", updateProgress, { passive: true });
+
+  // ── Active nav link ───────────────────────────────────────────
   const norm = (p) => {
     const u = new URL(p, location.href).pathname;
     return u.endsWith("/") ? u + "index.html" : u;
@@ -15,7 +26,7 @@
     }
   });
 
-  // ── Header shadow on scroll ──────────────────────────────────
+  // ── Header shadow on scroll ───────────────────────────────────
   const header = document.querySelector(".navbar");
   const setShadow = () => {
     if (!header) return;
@@ -24,7 +35,7 @@
   setShadow();
   window.addEventListener("scroll", setShadow, { passive: true });
 
-  // ── Smooth scroll (internal links) ───────────────────────────
+  // ── Smooth scroll (internal links) ────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
       const href = a.getAttribute("href");
@@ -38,13 +49,15 @@
   });
 
   if (prefersReduced) {
-    document.querySelectorAll(".reveal-up").forEach((el) => el.classList.add("is-visible"));
+    document.querySelectorAll(".reveal-up, .stagger-children").forEach((el) => {
+      el.classList.add("is-visible");
+    });
     return;
   }
 
-  // ── Reveal on scroll (.reveal-up → .is-visible) ──────────────
+  // ── Reveal on scroll (.reveal-up) ────────────────────────────
   if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver(
+    const revealIo = new IntersectionObserver(
       (entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -53,12 +66,33 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -5%" }
+      { threshold: 0.1, rootMargin: "0px 0px -5%" }
     );
-    document.querySelectorAll(".reveal-up").forEach((el) => io.observe(el));
+    document.querySelectorAll(".reveal-up").forEach((el) => revealIo.observe(el));
   } else {
     document.querySelectorAll(".reveal-up").forEach((el) => el.classList.add("is-visible"));
   }
+
+  // ── Stagger animation (.stagger-children) ────────────────────
+  document.querySelectorAll(".stagger-children").forEach((parent) => {
+    Array.from(parent.children).forEach((child, i) => {
+      child.style.setProperty("--stagger-i", `${i * 75}ms`);
+    });
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        ([entry], obs) => {
+          if (entry.isIntersecting) {
+            parent.classList.add("is-visible");
+            obs.disconnect();
+          }
+        },
+        { threshold: 0.08 }
+      );
+      io.observe(parent);
+    } else {
+      parent.classList.add("is-visible");
+    }
+  });
 
   // ── JS-tilt (mouse + touch) ───────────────────────────────────
   document.querySelectorAll(".js-tilt").forEach((el) => {
@@ -68,18 +102,16 @@
 
     const move = (clientX, clientY) => {
       rect = rect || el.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const rx = (-(clientY - cy) / rect.height * max).toFixed(2);
-      const ry = ((clientX - cx) / rect.width * max).toFixed(2);
+      const rx = (-(clientY - (rect.top + rect.height / 2)) / rect.height * max).toFixed(2);
+      const ry = ((clientX - (rect.left + rect.width / 2)) / rect.width * max).toFixed(2);
       el.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) scale(${scale})`;
     };
 
     el.addEventListener("mousemove", (e) => move(e.clientX, e.clientY));
     el.addEventListener("mouseleave", () => { el.style.transform = ""; rect = null; });
     el.addEventListener("touchstart", (e) => { const t = e.touches[0]; if (t) move(t.clientX, t.clientY); }, { passive: true });
-    el.addEventListener("touchmove", (e) => { const t = e.touches[0]; if (t) move(t.clientX, t.clientY); }, { passive: true });
-    el.addEventListener("touchend", () => { el.style.transform = ""; rect = null; });
+    el.addEventListener("touchmove",  (e) => { const t = e.touches[0]; if (t) move(t.clientX, t.clientY); }, { passive: true });
+    el.addEventListener("touchend",   () => { el.style.transform = ""; rect = null; });
   });
 
   // ── Parallax for [data-parallax] ─────────────────────────────
@@ -106,9 +138,7 @@
       const d = Math.max(rect.width, rect.height);
       const circle = document.createElement("span");
       circle.className = "ripple";
-      circle.style.width = circle.style.height = d + "px";
-      circle.style.left = e.clientX - rect.left - d / 2 + "px";
-      circle.style.top = e.clientY - rect.top - d / 2 + "px";
+      circle.style.cssText = `width:${d}px;height:${d}px;left:${e.clientX - rect.left - d / 2}px;top:${e.clientY - rect.top - d / 2}px`;
       el.appendChild(circle);
       circle.addEventListener("animationend", () => circle.remove());
     });
@@ -135,7 +165,7 @@
       const y = (e.clientY - rect.top) / rect.height - 0.5;
       el.style.transform = `translateY(-2px) rotateX(${(-y * 4).toFixed(2)}deg) rotateY(${(x * 4).toFixed(2)}deg)`;
     });
-    el.addEventListener("mouseleave", () => (el.style.transform = "translateY(0) rotateX(0) rotateY(0)"));
+    el.addEventListener("mouseleave", () => (el.style.transform = ""));
   });
 
   // ── Gallery navigation (#galPrev / #galNext) ──────────────────
@@ -165,7 +195,6 @@
       startScrollLeft = el.scrollLeft;
       el.classList.add("is-dragging");
     });
-
     el.addEventListener("pointermove", (e) => {
       if (!isDown) return;
       el.scrollLeft = startScrollLeft - (e.clientX - startX);

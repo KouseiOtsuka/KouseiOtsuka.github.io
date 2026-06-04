@@ -133,105 +133,87 @@
       </div>
     </header>
 
-    <!-- サイトマップ（構成）: Home / About / Publication / News / Contact -->
     <main>
-      <!-- メインビュー -->
-      <section class="hero py-5 py-lg-6 reveal-up">
+      <!-- ヒーロー -->
+      <section class="hero py-5 py-lg-6">
         <div class="container">
           <div class="row align-items-center g-5">
-            <div class="col-lg-6 order-lg-2 text-center">
+
+            <!-- 画像 -->
+            <div class="col-lg-5 order-lg-2 text-center hero-image hero-glow">
               <img
-                loading="lazy"
-                class="rounded-4 shadow-lg hero-img"
-                data-parallax="22"
+                loading="eager"
+                class="hero-img"
+                data-parallax="20"
                 src="images/profile.jpg"
-                alt="プロフィール画像"
+                alt="大塚航世 プロフィール画像"
               />
             </div>
-            <div class="col-lg-6 order-lg-1">
-              <span class="badge rounded-pill text-bg-light mb-3"
-                >XRセキュリティ / ユーザブルセキュリティ</span
-              >
-              <span class="badge rounded-pill text-bg-dark mb-3"
-                >博士後期課程</span
-              >
-              <h6> おおつか こうせい</h6>
-              <h1 class="display-5 fw-bold text-white mb-3">
-                大塚 航世 <span class="fs-3 text-white-50">Kousei Otsuka</span>
-              </h1>
-              <p class="lead text-white-50">
-                XR環境は、視覚や聴覚を通じて高い没入感を提供する一方で、ユーザの知覚に強く作用するため、新たなセキュリティリスクを生む可能性があります。
-                私は、安全なXR体験の実現に向けて、特に空間音響を悪用した攻撃やリスクに着目して研究を推進しました。
-                <a
-                  href="about.html#researchDetail"
-                  class="btn btn-outline-light btn-sm rounded-pill"
-                >
-                  研究詳細はこちら
-                </a>
-              </p>
-              <p class="lead text-white-50">
-                修士課程では、VR空間内で提示される不自然な音がユーザにどのように認識されるかを実験的に評価しました。
-                博士課程では、その知見を発展させ、XRアプリケーション内で不審な音提示を検知するための技術的対策に取り組んでいます。
-                <a
-                  href="about.html#audioDefenseDetail"
-                  class="btn btn-outline-light btn-sm rounded-pill"
-                >
-                  研究詳細はこちら
-                </a>
-              </p>
 
-              <p class="lead text-white-50">
-                また、既存のXR攻撃を基本的な操作単位に分解し、技術的に実現可能かを検証することで、XR攻撃の体系的な整理にも取り組んでいます。                <a
-                  href="about.html#xAttackPrimitiveDetail"
-                  class="btn btn-outline-light btn-sm rounded-pill"
-                >
-                  研究詳細はこちら
-                </a>
-              </p>
-
-              <div class="d-flex gap-2 flex-wrap mt-3">
-                <a href="about.html" class="btn btn-light btn-lg rounded-pill"
-                  ><i class="bi bi-person-vcard"></i> 自己紹介</a
-                >
-                <a
-                  href="publication.html"
-                  class="btn btn-outline-light btn-lg rounded-pill"
-                  ><i class="bi bi-journal-text"></i> 業績一覧</a
-                >
+            <!-- テキスト -->
+            <div class="col-lg-7 order-lg-1 hero-text">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge rounded-pill badge-brand">XRセキュリティ</span>
+                <span class="badge rounded-pill text-bg-dark">ユーザブルセキュリティ</span>
+                <span class="badge rounded-pill text-bg-dark">博士後期課程</span>
               </div>
-              <div class="mt-4 small text-white-50">
-                <div class="fw-bold text-white mb-2">所属</div>
-                <i class="bi bi-mortarboard"></i>
-                東邦大学大学院 理学研究科 ユーザブルセキュリティ(金岡)研究室
-                <a
-                  href="https://www.klab.is.sci.toho-u.ac.jp/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <i class="bi bi-box-arrow-up-right ms-1"></i>
+
+              <p class="small text-white-50 mb-1">おおつか こうせい</p>
+              <h1 class="display-5 fw-bold text-white mb-3">
+                大塚 航世
+                <span class="fs-4 fw-normal text-white-50 ms-2">Kousei Otsuka</span>
+              </h1>
+
+              <p class="lead text-white-50 mb-3" style="max-width:520px;">
+                XR環境における聴覚刺激を悪用した攻撃の実証と、
+                その検知・防御技術の研究に取り組んでいます。
+                <a href="about.html#researchDetail" class="text-white-50 ms-1">
+                  <i class="bi bi-arrow-right-circle"></i> 研究詳細
                 </a>
-                <br />
-                <i class="bi bi-diagram-3"></i>
-                JST CREST IoR 研究チーム
-                <a
-                  href="https://www.internet-of-realities.org/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <i class="bi bi-box-arrow-up-right ms-1"></i>
+              </p>
+
+              <!-- リサーチキーワード -->
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="chip-brand"><i class="bi bi-headset-vr me-1"></i>XR / VR</span>
+                <span class="chip-brand"><i class="bi bi-soundwave me-1"></i>Spatial Audio</span>
+                <span class="chip-brand"><i class="bi bi-shield-lock me-1"></i>Usable Security</span>
+                <span class="chip-brand"><i class="bi bi-diagram-2 me-1"></i>Attack Primitives</span>
+              </div>
+
+              <div class="d-flex gap-2 flex-wrap mb-4">
+                <a href="about.html" class="btn btn-gradient btn-lg rounded-pill">
+                  <i class="bi bi-person-vcard"></i> 自己紹介
                 </a>
-                <br />
-                <i class="bi bi-building-lock"></i>
-                NICT サイバーセキュリティ研究室 RA
-                <a
-                  href="https://csl.nict.go.jp/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <i class="bi bi-box-arrow-up-right ms-1"></i>
+                <a href="publication.html" class="btn btn-outline-light btn-lg rounded-pill">
+                  <i class="bi bi-journal-text"></i> 業績一覧
                 </a>
+              </div>
+
+              <div class="small text-white-50 d-flex flex-column gap-1">
+                <div>
+                  <i class="bi bi-mortarboard me-1 text-white-50"></i>
+                  東邦大学大学院 理学研究科 ユーザブルセキュリティ(金岡)研究室
+                  <a href="https://www.klab.is.sci.toho-u.ac.jp/" target="_blank" rel="noopener" class="text-white-50 ms-1">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                  </a>
+                </div>
+                <div>
+                  <i class="bi bi-diagram-3 me-1 text-white-50"></i>
+                  JST CREST IoR 研究チーム
+                  <a href="https://www.internet-of-realities.org/" target="_blank" rel="noopener" class="text-white-50 ms-1">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                  </a>
+                </div>
+                <div>
+                  <i class="bi bi-building-lock me-1 text-white-50"></i>
+                  NICT サイバーセキュリティ研究室 RA
+                  <a href="https://csl.nict.go.jp/" target="_blank" rel="noopener" class="text-white-50 ms-1">
+                    <i class="bi bi-box-arrow-up-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -287,10 +269,10 @@
         <div class="container">
           <div class="row g-4">
             <div class="col-lg-6">
-              <section class="card card--plain shadow-sm h-100" data-hover-lift>
+              <section class="card card--plain card-accent-top shadow-sm h-100" data-hover-lift>
                 <div class="card-body">
-                  <h2 class="h4 mb-3">経歴</h2>
-                  <ul class="timeline list-unstyled mb-0">
+                  <h2 class="h4 section-heading">経歴</h2>
+                  <ul class="timeline list-unstyled mb-0 stagger-children">
                     <li class="item">
                       <div class="fw-semibold">
                         東邦大学大学院　理学研究科　情報科学専攻　博士後期課程
@@ -319,10 +301,10 @@
             </div>
 
             <div class="col-lg-6">
-              <section class="card card--plain shadow-sm h-100" data-hover-lift>
+              <section class="card card--plain card-accent-top shadow-sm h-100" data-hover-lift>
                 <div class="card-body">
-                  <h2 class="h4 mb-3">職歴</h2>
-                  <ul class="timeline list-unstyled mb-0">
+                  <h2 class="h4 section-heading">職歴</h2>
+                  <ul class="timeline list-unstyled mb-0 stagger-children">
                     <li class="item">
                       <div class="fw-semibold">
                         東邦大学　理学部　情報科学科
@@ -361,8 +343,8 @@
         <div class="container">
           <div class="row g-4">
             <div class="col-lg-6">
-              <h2 class="h3 mb-3">Recent News</h2>
-              <div class="list-group shadow-sm">
+              <h2 class="h3 section-heading">Recent News</h2>
+              <div class="list-group shadow-sm stagger-children">
 
                 <!-- 1件目 -->
                 <a
@@ -455,9 +437,9 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <h2 class="h3 mb-3">Pick up Production</h2>
+              <h2 class="h3 section-heading">Pick up Production</h2>
 
-              <div class="card shadow-sm overflow-hidden js-tilt reveal-up" data-hover-lift>
+              <div class="card card-accent-top shadow-sm overflow-hidden js-tilt reveal-up" data-hover-lift>
                 <div class="row g-0 align-items-stretch">
                   <div class="col-7">
                     <div class="card-body h-100 d-flex flex-column">
@@ -482,7 +464,7 @@
                 </div>
               </div>
 
-              <div class="card shadow-sm overflow-hidden js-tilt reveal-up" data-hover-lift>
+              <div class="card card-accent-top shadow-sm overflow-hidden js-tilt reveal-up" data-hover-lift>
                 <div class="row g-0 align-items-stretch">
                   <div class="col-7">
                     <div class="card-body h-100 d-flex flex-column">
