@@ -1,195 +1,76 @@
-/* --------------
-  カスタムスタイル（Bootstrap拡張）
------------------*/
+/* カスタムスタイル（Bootstrap拡張） */
 
 :root {
   --brand-start: #0ea5e9;
   --brand-end: #6366f1;
 }
 
-.bg-gradient-primary {
-  background: linear-gradient(120deg, var(--brand-start), var(--brand-end));
-}
-
-.hero {
-  background: radial-gradient(
-      1200px 600px at 100% -10%,
-      rgba(255, 255, 255, 0.08),
-      transparent
-    ),
-    linear-gradient(120deg, var(--brand-start), var(--brand-end));
-  color: #fff;
-}
-
-.hero-img {
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border: 4px solid rgba(255, 255, 255, 0.35);
-}
-
-.card-hover {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.card-hover:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-
-.publication-list li {
-  margin-bottom: 0.6rem;
-}
-
-/* Utilities */
-.py-lg-6 {
-  padding-top: 5.5rem !important;
-  padding-bottom: 5.5rem !important;
-}
-
-/* スマホでのヒーロー余白調整 */
-@media (max-width: 575.98px) {
-  .hero .display-5 {
-    font-size: 2rem;
-  }
-}
-
-/* ===============================
-   Black Base Overrides (Bootstrap)
-   =============================== */
-body,
-.bg-body-tertiary {
-  background: #000 !important;
-  color: #e6e7e9;
-}
-.bg-gradient-primary {
-  background: #000 !important;
-}
-.hero {
-  background: #000 !important;
-}
-.navbar,
-.offcanvas,
-.card,
-.dropdown-menu {
-  background-color: #111 !important;
-  color: #e6e7e9;
-}
-.list-group-item {
-  background-color: #111 !important;
-  color: #e6e7e9;
-}
-.text-secondary {
-  color: #b0b3b8 !important;
-}
-footer.bg-dark {
-  background-color: #000 !important;
-}
-
-/* ==== Black Base: robust overrides (v2) ==== */
+/* ── Global: Black Base ─────────────────────────────────────── */
 html,
 body {
   background-color: #000 !important;
   color: #e7e8ea;
 }
-main {
-  background: transparent !important;
-}
+main { background: transparent !important; }
 .container,
-section {
-  background: transparent !important;
-}
+section { background: transparent !important; }
+
 .navbar,
-.offcanvas {
-  background-color: #000 !important;
-}
-.hero {
-  background-color: #000 !important;
-  background-image: none !important;
-}
+.offcanvas { background-color: #000 !important; color: #e6e7e9; }
+.dropdown-menu { background-color: #111 !important; color: #e6e7e9; }
 .card,
 .list-group-item {
   background-color: #0f0f10 !important;
   color: #e7e8ea;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
-.text-secondary {
-  color: #b1b5bb !important;
+.text-secondary { color: #b1b5bb !important; }
+footer { background-color: #000 !important; }
+.bg-gradient-primary { background: #000 !important; }
+.hero { background-color: #000 !important; background-image: none !important; }
+
+.btn-light { background-color: #f4f5f6; color: #111; }
+.btn-outline-light { color: #f4f5f6; border-color: rgba(255, 255, 255, 0.4); }
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero-img {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.35);
 }
-footer {
-  background-color: #000 !important;
-}
-.btn-light {
-  background-color: #f4f5f6;
-  color: #111;
-}
-.btn-outline-light {
-  color: #f4f5f6;
-  border-color: rgba(255, 255, 255, 0.4);
+@media (max-width: 575.98px) {
+  .hero .display-5 { font-size: 2rem; }
 }
 
-/* Production card thumbnails */
-.card img {
-  display: block;
-}
+/* ── Utilities ──────────────────────────────────────────────── */
+.py-lg-6 { padding-top: 5.5rem !important; padding-bottom: 5.5rem !important; }
+.object-fit-cover { object-fit: cover; }
 
-/* ===== Reveal animation ===== */
-.reveal-up {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+/* ── Card ───────────────────────────────────────────────────── */
+.card img { display: block; }
+.card-hover { transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
-.reveal-up.is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-/* Tilt fallback for no-JS hover */
-.js-tilt {
-  transform-style: preserve-3d;
-}
-.js-tilt img {
-  transform: translateZ(0);
-}
-
-/* ---- Timeline style for 経歴/職歴 ---- */
-.timeline .item {
-  position: relative;
-  padding-left: 1.25rem;
-  margin-bottom: 1rem;
-  border-left: 2px solid rgba(255, 255, 255, 0.12);
-}
-.timeline .item:last-child {
-  margin-bottom: 0;
-}
-.timeline .item::before {
-  content: "";
-  position: absolute;
-  left: -6px;
-  top: 0.4rem;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
-}
-
-/* ---- Career/Work cards: pure black with thin white border ---- */
 .card--plain {
   background-color: #000 !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 
-/* ---- Timeline style ---- */
+/* ── Publication list ───────────────────────────────────────── */
+.publication-list li { margin-bottom: 0.6rem; }
+
+/* ── Timeline ───────────────────────────────────────────────── */
 .timeline .item {
   position: relative;
   padding-left: 1.25rem;
   margin-bottom: 1rem;
   border-left: 2px solid rgba(255, 255, 255, 0.18);
 }
-.timeline .item:last-child {
-  margin-bottom: 0;
-}
+.timeline .item:last-child { margin-bottom: 0; }
 .timeline .item::before {
   content: "";
   position: absolute;
@@ -202,22 +83,55 @@ footer {
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
 }
 
-/* ===== JS enhancements styles ===== */
-.reveal {
+/* ── Reveal animation (.reveal-up) ─────────────────────────── */
+.reveal-up {
   opacity: 0;
-  transform: translateY(10px) scale(0.98);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.reveal-show {
+.reveal-up.is-visible {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
 }
+
+/* ── JS-tilt ────────────────────────────────────────────────── */
+.js-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.12s ease;
+}
+
+/* ── Hover lift (.hover-lift) ───────────────────────────────── */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+.hover-lift:hover,
+.hover-lift:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.25);
+}
+
+/* ── Hover lift ([data-hover-lift]) ─────────────────────────── */
+[data-hover-lift] {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  will-change: transform;
+}
+
+/* ── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift,
+  .reveal-up,
+  .js-tilt { transition: none !important; }
+}
+
+/* ── Navbar scrolled ────────────────────────────────────────── */
 .navbar.navbar-scrolled {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
   background: #000 !important;
 }
 
-/* Ripple */
+/* ── Ripple ─────────────────────────────────────────────────── */
 .ripple {
   position: absolute;
   border-radius: 50%;
@@ -227,13 +141,10 @@ footer {
   animation: ripple 0.6s ease-out forwards;
 }
 @keyframes ripple {
-  to {
-    transform: scale(2.4);
-    opacity: 0;
-  }
+  to { transform: scale(2.4); opacity: 0; }
 }
 
-/* Back to top */
+/* ── Back to top ────────────────────────────────────────────── */
 .back-to-top {
   position: fixed;
   right: 16px;
@@ -253,159 +164,58 @@ footer {
   transition: all 0.25s ease;
   z-index: 1090;
 }
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.back-to-top:hover {
-  background: #111;
-}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: #111; }
 
-/* Optional: hover-lift utility (opt-in) */
-[data-hover-lift] {
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-  will-change: transform;
-}
+/* ── Brand icon ─────────────────────────────────────────────── */
+.brand-icon { width: 28px; height: 28px; object-fit: contain; display: block; border-radius: 6px; }
+.navbar-brand span { line-height: 1; }
 
+/* ── Profile avatar ─────────────────────────────────────────── */
 .profile-avatar {
   width: min(240px, 100%);
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
-/* 趣味画像：比率をそろえてカード内で統一感を出す */
-.hobby-figure {
-  margin: 0;
-}
-.hobby-img {
-  width: 100%;
-  aspect-ratio: 16 / 10; /* お好みで 4/3 や 3/2 に変更可 */
-  object-fit: cover;
-}
+/* ── Hobby image ────────────────────────────────────────────── */
+.hobby-figure { margin: 0; }
+.hobby-img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 
-/* Awards 画像は常に枠内に収めてトリミング */
-.object-fit-cover {
-  object-fit: cover;
-}
-
-/* セクション間の小見出しを詰めすぎないように */
+/* ── Awards heading spacing ─────────────────────────────────── */
 #awards-2025 h3,
 #awards-2024 h3,
-#awards-etc h3 {
-  margin-top: 0.25rem;
+#awards-etc h3 { margin-top: 0.25rem; }
+
+/* ── Index thumbnails ───────────────────────────────────────── */
+.index-news-thumb {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+}
+@media (max-width: 576px) {
+  .index-news-thumb { width: 72px; height: 72px; }
 }
 
-/* 横スクロールの見やすさ向上（任意） */
-.overflow-auto::-webkit-scrollbar {
-  height: 8px;
-}
-.overflow-auto::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-}
-.photo-rail::-webkit-scrollbar {
-  height: 8px;
-}
-.photo-rail::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-}
-@media (min-width: 768px) {
-  .photo-rail-item {
-    width: 260px;
-  }
+.index-production-thumb {
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
 }
 
-/* 横スクロールの帯（前に提案したものがあればそのままでOK） */
+/* ── Photo rail ─────────────────────────────────────────────── */
 .photo-rail {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.photo-rail-track {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.75rem;
-  padding: 0.25rem 0;
-}
-
-/* 各サムネは縮小禁止＋固定幅（例: 240px） */
-.photo-rail-item {
-  flex: 0 0 auto;
-  width: 240px;
-}
-
-/* ドラッグ用の見た目（カーソル/選択防止） */
-.drag-scroll {
-  cursor: grab;
-  user-select: none;
-  touch-action: pan-x;
-}
-.drag-scroll.is-dragging {
-  cursor: grabbing;
-}
-
-/* （任意）スクロールバーを少し見やすく */
-.photo-rail::-webkit-scrollbar {
-  height: 8px;
-}
-.photo-rail::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-}
-/* 既存の .photo-rail / .photo-rail-track / .photo-rail-item がある想定 */
-
-.photo-rail-track {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 0.75rem;
-  padding: 0.25rem 0;
-}
-
-.photo-rail-item {
-  /* 縮小禁止 + 固定幅（お好みで 200–280px 程度） */
-  flex: 0 0 auto;
-  width: 360px;
-
-  /* ▼ アイテムの揃え位置（先頭で揃える） */
-  scroll-snap-align: start;
-
-  /* ▼ スナップを強めたいとき（任意） */
-  /* scroll-snap-stop: always; */
-}
-
-/* ドラッグ用の見た目（既出のドラッグスクロール対応を使う場合） */
-.drag-scroll {
-  cursor: grab;
-  user-select: none;
-  touch-action: pan-x;
-}
-.drag-scroll.is-dragging {
-  cursor: grabbing;
-}
-
-/* （任意）スクロールバー見やすく */
-.photo-rail::-webkit-scrollbar {
-  height: 8px;
-}
-.photo-rail::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-}
-
-/* 2枚＋チラ見せ用のフォトレール */
-.photo-rail {
-  /* 可変パラメータ（好みで調整） */
-  --per: 2; /* 1画面に完全表示する枚数 */
-  --gap: 0.75rem; /* サムネ同士の間隔 */
-  --peek: 20px; /* 3枚目の「チラ見せ」幅 */
-
+  --per: 2;
+  --gap: 0.75rem;
+  --peek: 20px;
   overflow-x: auto;
   display: block;
   -webkit-overflow-scrolling: touch;
-
-  scroll-padding-inline: var(--gap); /* 先頭の揃え補正 */
+  scroll-padding-inline: var(--gap);
 }
+@media (min-width: 992px) { .photo-rail { --peek: 28px; } }
 
 .photo-rail-track {
   display: flex;
@@ -415,42 +225,9 @@ footer {
 }
 
 .photo-rail-item {
-  /* 縮小禁止＋幅を計算式で指定：2枚分＋gap＋peek でちょうど画面幅に */
-  flex: 0 0
-    calc((100% - (var(--gap) * (var(--per) - 1)) - var(--peek)) / var(--per));
+  flex: 0 0 calc((100% - (var(--gap) * (var(--per) - 1)) - var(--peek)) / var(--per));
+  scroll-snap-align: start;
 }
-
-/* サムネの見た目（比率固定＆トリミング） */
-.photo-rail-item .ratio {
-  width: 100%;
-}
-.photo-rail-item img {
-  height: 200px; /* 任意の高さに設定 */
-  width: auto;   /* 横幅は自動調整 */
-  object-fit: contain;
-  border-radius: 0.75rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-
-
-/* ドラッグスクロール（任意：以前の実装を使う場合） */
-.drag-scroll {
-  cursor: grab;
-  user-select: none;
-  touch-action: pan-x;
-}
-.drag-scroll.is-dragging {
-  cursor: grabbing;
-}
-
-/* 画面が広い時は少しだけpeekを増やす例（任意） */
-@media (min-width: 992px) {
-  .photo-rail {
-    --peek: 28px;
-  }
-}
-
-/* サムネが大きくなりすぎるのを防ぐ上限（任意） */
 @media (min-width: 1200px) {
   .photo-rail-item {
     flex-basis: clamp(
@@ -461,111 +238,32 @@ footer {
   }
 }
 
-/* スクロールバー見やすく（任意） */
-.photo-rail::-webkit-scrollbar {
-  height: 8px;
-}
-.photo-rail::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-}
-
-/* ナビ左上のブランドアイコン */
-.brand-icon {
-  width: 28px; /* お好みで 24 or 32 でもOK */
-  height: 28px;
-  object-fit: contain; /* 画像がはみ出さない */
-  display: block;
-  border-radius: 6px; /* 角丸にしたい場合（不要なら削除） */
-}
-
-/* 文字を少し下げて基線をそろえたいとき（微調整・任意） */
-.navbar-brand span {
-  line-height: 1;
-}
-
-/* --- hover: ふわっと持ち上がる --- */
-.hover-lift {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  will-change: transform;
-}
-.hover-lift:hover,
-.hover-lift:focus-visible {
-  transform: translateY(-4px);
-  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.25);
-}
-
-/* --- スクロール出現 --- */
-.reveal-up {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-.reveal-up.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* （任意）チルト見た目の微調整 */
-.js-tilt {
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform 0.12s ease; /* 指を離したときにスッと戻る */
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hover-lift,
-  .reveal-up,
-  .js-tilt {
-    transition: none !important;
-  }
-}
-
-/* indexニュース一覧のサムネ（固定正方形） */
-.index-news-thumb {
-  width: 112px;
-  height: 112px;
-  object-fit: cover; /* はみ出しをトリミング */
-  object-position: 50% 50%;
-  display: block; /* 余白の謎のズレ防止 */
-}
-
-/* モバイルで少し小さく（任意） */
-@media (max-width: 576px) {
-  .index-news-thumb {
-    width: 72px;
-    height: 72px;
-  }
-}
-
-/* index Productionのサムネ（固定正方形） */
-.index-production-thumb {
-  width: 600px;
-  height: 600px;
-  object-fit: cover; /* はみ出しをトリミング */
-  object-position: 50% 50%;
-  display: block; /* 余白の謎のズレ防止 */
-}
-
-/* ===== css2025.html のギャラリー専用：高さ統一＆比率維持 ===== */
-.gallery--fixed-height .photo-rail-item{
-  /* 画像の横幅に合わせて可変。固定幅指定を上書き */
-  flex: 0 0 auto;
+.photo-rail-item .ratio { width: 100%; }
+.photo-rail-item img {
+  height: 200px;
   width: auto;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
-.gallery--fixed-height .gallery-img{
-  height: 300px;   /* ← 統一したい高さ。お好みで調整 */
-  width: auto;     /* 横は画像の比率通りに可変 */
+/* ── Drag scroll ────────────────────────────────────────────── */
+.drag-scroll { cursor: grab; user-select: none; touch-action: pan-x; }
+.drag-scroll.is-dragging { cursor: grabbing; }
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+.overflow-auto::-webkit-scrollbar,
+.photo-rail::-webkit-scrollbar { height: 8px; }
+.overflow-auto::-webkit-scrollbar-thumb,
+.photo-rail::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.25); border-radius: 999px; }
+
+/* ── Gallery fixed-height (news-detail) ─────────────────────── */
+.gallery--fixed-height .photo-rail-item { flex: 0 0 auto; width: auto; }
+.gallery--fixed-height .gallery-img {
+  height: 300px;
+  width: auto;
   display: block;
-  object-fit: contain;  /* トリミングせず、比率維持（余白OK） */
+  object-fit: contain;
 }
-
-/* 画面幅で高さを可変に（任意） */
-@media (max-width: 576px){
-  .gallery--fixed-height .gallery-img{ height: 220px; }
-}
-@media (min-width: 992px){
-  .gallery--fixed-height .gallery-img{ height: 360px; }
-}
-
+@media (max-width: 576px) { .gallery--fixed-height .gallery-img { height: 220px; } }
+@media (min-width: 992px) { .gallery--fixed-height .gallery-img { height: 360px; } }
