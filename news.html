@@ -100,14 +100,25 @@
 
 <main class="py-5">
   <div class="container">
-    <header class="mb-4">
+    <header class="mb-3">
       <h1 class="h2 fw-bold d-flex align-items-center gap-2"><i class="bi bi-newspaper"></i> News</h1>
       <p class="text-secondary mb-0">ニュースをカードで一覧表示。クリックで詳細ページへ。</p>
     </header>
-    <div class="row g-4 stagger-children">
+
+    <!-- フィルターボタン -->
+    <div class="news-filter d-flex gap-2 mb-4" role="group" aria-label="カテゴリフィルター">
+      <button class="btn btn-sm rounded-pill news-filter-btn active" data-filter="all">すべて</button>
+      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="国際会議">国際会議</button>
+      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="国内会議">国内会議</button>
+      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="受賞">受賞</button>
+      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="プロジェクト">プロジェクト</button>
+      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="修論発表">修論発表</button>
+    </div>
+
+    <div class="row g-4">
 
       <!-- NDSS -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail\20260223_NDSS2026.html">
           <img loading="lazy" src="news-detail\images\NDSS2026\NDSS2026tham.jpg" class="card-img-top" alt="ニュース1">
           <div class="card-body">
@@ -125,7 +136,7 @@
       <!-- NDSS -->
 
       <!-- Master -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20260217_MasterPresentation.html">
           <img loading="lazy" src="news-detail\images\MasterPresentation\MasterPresentation_tham.jpg" class="card-img-top" alt="ニュース1">
           <div class="card-body">
@@ -143,7 +154,7 @@
       <!-- Master -->
 
       <!-- CSS2025 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20251026_css2025.html">
           <img loading="lazy" src="news-detail\images\css2025\css2025-tham.jpg" class="card-img-top" alt="ニュース1">
           <div class="card-body">
@@ -162,7 +173,7 @@
       <!-- CSS2025 -->
 
       <!-- IEEEMetaCom2025 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20250827_IEEEMetacom2025.html">
           <img loading="lazy" src="news-detail\images\IEEEMetaCom2025\IEEEMetaCom-thum.jpg" class="card-img-top" alt="ニュース1">
           <div class="card-body">
@@ -180,7 +191,7 @@
       <!-- IEEEMetaCom2025 -->
 
       <!-- IoRsym2025 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20250314_IoRsym.html">
           <img loading="lazy" src="news-detail\images\IoRSym2025\IoRsym-tham.png" class="card-img-top" alt="ニュース1">
           <div class="card-body">
@@ -198,7 +209,7 @@
       <!-- IoRsym2025 -->
 
       <!-- SPT2025 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20250306_SPT202503.html">
           <img loading="lazy" src="news-detail\images\spt2025\spt2025-tham.png" class="card-img-top" alt="ニュース1">
           <div class="card-body">
@@ -216,7 +227,7 @@
       <!-- SPT2025 -->
 
       <!-- AIP2024 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20250303_AIP2024.html">
           <img loading="lazy" src="news-detail\images\aip2024\aip2024-tham.png" class="card-img-top" alt="ニュース1">
           <div class="card-body">
@@ -234,7 +245,7 @@
       <!-- AIP2024 -->
 
       <!-- CSS2024 -->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20241022_css2024.html">
           <img loading="lazy" src="news-detail\images\css2024\css2024-tham.jpg" class="card-img-top" alt="ニュース1">
           <div class="card-body">

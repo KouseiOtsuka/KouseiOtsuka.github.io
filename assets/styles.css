@@ -51,8 +51,6 @@ footer { background-color: var(--surface-0) !important; }
 }
 .navbar {
   position: relative;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 /* グラデーションアクセントライン */
 .navbar::after {
@@ -519,6 +517,146 @@ footer::before {
 .photo-rail::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.18);
   border-radius: 999px;
+}
+
+/* ── Mobile offcanvas nav: 見やすく大きく ───────────────────── */
+@media (max-width: 991.98px) {
+  .offcanvas { width: 280px !important; }
+  .offcanvas-body .navbar-nav { width: 100%; }
+  .offcanvas-body .nav-item   { width: 100%; }
+  .offcanvas-body .nav-link {
+    font-size: 1.05rem !important;
+    padding: 0.85rem 1.25rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  .offcanvas-body .nav-item:last-of-type .nav-link { border-bottom: none; }
+  .offcanvas-body .ms-lg-3 { margin: 0.5rem 0 0 0 !important; }
+  .offcanvas-body .btn {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* ── Page transition ────────────────────────────────────────── */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+body { animation: pageFadeIn 0.38s ease both; }
+body.page-leaving {
+  animation: none !important;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.24s ease, transform 0.24s ease;
+}
+
+/* ── Cursor spotlight ───────────────────────────────────────── */
+.cursor-spotlight {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    520px circle at var(--sx, -999px) var(--sy, -999px),
+    rgba(14, 165, 233, 0.048),
+    transparent 42%
+  );
+}
+
+/* ── Typing animation ───────────────────────────────────────── */
+.typed-line {
+  min-height: 1.5em;
+  font-size: 0.9rem;
+}
+.typed-cursor {
+  display: inline-block;
+  color: var(--brand-start);
+  font-weight: 300;
+  margin-left: 1px;
+  transition: opacity 0.12s;
+}
+.typed-cursor--off { opacity: 0; }
+
+/* ── News filter ────────────────────────────────────────────── */
+.news-filter { flex-wrap: wrap; }
+.news-filter-btn {
+  background: var(--surface-2);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+.news-filter-btn:hover {
+  border-color: var(--brand-start);
+  color: var(--brand-start);
+  background: rgba(14, 165, 233, 0.08);
+}
+.news-filter-btn.active {
+  background: linear-gradient(135deg, var(--brand-start), var(--brand-end));
+  color: #fff !important;
+  border-color: transparent;
+  box-shadow: 0 2px 14px rgba(14, 165, 233, 0.32);
+}
+.news-card-col {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.news-card-col.filter-out {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+/* ── TOC sidebar ────────────────────────────────────────────── */
+.page-toc {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 170px;
+  z-index: 99;
+  background: rgba(6, 6, 6, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 1rem 0.85rem 1rem 0.75rem;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+.toc-title {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--text-muted);
+  margin-bottom: 0.65rem;
+  font-weight: 600;
+}
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+.toc-link {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  padding: 0.25rem 0 0.25rem 0.65rem;
+  border-left: 2px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.35;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.toc-link:hover { color: var(--text-primary); border-left-color: rgba(255,255,255,0.18); }
+.toc-link.toc-active {
+  color: var(--brand-start);
+  border-left-color: var(--brand-start);
+  font-weight: 500;
 }
 
 /* ── Gallery fixed-height (news-detail) ─────────────────────── */
