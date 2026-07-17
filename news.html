@@ -1,30 +1,30 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- ▼ ページ固有 -->
+    <!-- タイトル -->
     <title>
-      News | 大塚 航世（Kousei Otsuka）東邦大 ユーザブルセキュリティ(金岡)研究室
+      News | 大塚 航世 (Kousei Otsuka) | XRセキュリティ研究室の活動・発表一覧
     </title>
     <meta
       name="description"
-      content="東邦大学大学院 ユーザブルセキュリティ研究室所属の大塚航世です。XRセキュリティやユーザブルセキュリティに関する研究をしています。学会参加や個人的ニュースなど。"
+      content="XRセキュリティ研究室の研究活動や国際会議・学会での発表・参加報告をまとめたニュース一覧です。"
     />
     <link rel="canonical" href="https://kouseiotsuka.github.io/news.html" />
-    <!-- ▲ ページ固有 -->
+    <!-- ページ固有 -->
 
     <!-- OGP -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Kousei Otsuka" />
-    <meta property="og:title" content="News | 大塚 航世（Kousei Otsuka）" />
+    <meta property="og:title" content="News | 大塚 航世 (Kousei Otsuka)" />
     <meta
       property="og:description"
-      content="東邦大学大学院 ユーザブルセキュリティ研究室所属の大塚航世です。XRセキュリティやユーザブルセキュリティに関する研究をしています。学会参加や個人的ニュースなど。"
+      content="XRセキュリティ研究室の研究活動や国際会議・学会での発表・参加報告をまとめたニュース一覧です。"
     />
     <meta property="og:url" content="https://kouseiotsuka.github.io/news.html" />
-    <!-- ▲ ページ固有 -->
+    <!-- ページ固有 -->
     <meta
       property="og:image"
       content="https://kouseiotsuka.github.io/images/favicon.png"
@@ -50,7 +50,6 @@
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.png" type="image/png" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   </head>
 <body class="bg-black text-light" data-bs-theme="dark">
 
@@ -102,70 +101,64 @@
   <div class="container">
     <header class="mb-3">
       <h1 class="h2 fw-bold d-flex align-items-center gap-2"><i class="bi bi-newspaper"></i> News</h1>
-      <p class="text-secondary mb-0">ニュースをカードで一覧表示。クリックで詳細ページへ。</p>
+      <p class="text-secondary mb-0">研究室の活動や学会・国際会議での報告を、ニュースとして一覧でお届けします。</p>
     </header>
 
-    <!-- フィルターボタン -->
-    <div class="news-filter d-flex gap-2 mb-4" role="group" aria-label="カテゴリフィルター">
+    <!-- フィルター -->
+    <div class="news-filter d-flex gap-2 mb-4" role="group" aria-label="ニュースフィルター">
       <button class="btn btn-sm rounded-pill news-filter-btn active" data-filter="all">すべて</button>
       <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="国際会議">国際会議</button>
-      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="国内会議">国内会議</button>
-      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="受賞">受賞</button>
-      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="プロジェクト">プロジェクト</button>
-      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="修論発表">修論発表</button>
+      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="学会発表">学会発表</button>
+      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="研究">研究</button>
+      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="イベント">イベント</button>
+      <button class="btn btn-sm rounded-pill news-filter-btn" data-filter="その他">その他</button>
     </div>
 
     <div class="row g-4">
 
-      <!-- NDSS -->
+      <!-- COMPSAC -->
       <div class="col-md-6 col-lg-4 news-card-col">
-        <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail\20260223_NDSS2026.html">
-          <img loading="lazy" src="news-detail\images\NDSS2026\NDSS2026tham.jpg" class="card-img-top" alt="ニュース1">
+        <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20260717_IEEECOMPSAC2026.html">
+          <img loading="lazy" src="news-detail/images/compsac2026/compsac2026-thumb.jpg" class="card-img-top" alt="COMPSAC">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
               <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">国際会議</span>
-              <!-- 追加したい分だけ増やす -->
-              <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
             </div>
-            <h3 class="h5">NDSS2026に参加、発表</h3>
-            <p class="card-text small text-secondary">難関会議へ初参加、ポスター発表！</p>
+            <h3 class="h5">IEEE COMPSAC 2026で発表</h3>
+            <p class="card-text small text-secondary">IEEE COMPSAC 2026に参加し、Student Research Symposium で発表しました。</p>
+            <div class="small text-secondary"><i class="bi bi-calendar-week"></i> 2026-7-06 ~ 2026-7-10</div>
+          </div>
+        </a>
+      </div>
+      <!-- COMPSAC -->
+
+      <!-- NDSS -->
+      <div class="col-md-6 col-lg-4 news-card-col">
+        <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20260223_NDSS2026.html">
+          <img loading="lazy" src="news-detail/images/ndss2026/ndss2026-thumb.jpg" class="card-img-top" alt="NDSS2026">
+          <div class="card-body">
+            <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">国際会議</span>
+            </div>
+            <h3 class="h5">NDSS2026に参加、ポスター発表</h3>
+            <p class="card-text small text-secondary">NDSS 2026に参加し、ポスター発表を行いました。</p>
             <div class="small text-secondary"><i class="bi bi-calendar-week"></i>2026-2-23 ~ 2026-2-27</div>
           </div>
         </a>
       </div>
       <!-- NDSS -->
 
-      <!-- Master -->
-      <div class="col-md-6 col-lg-4 news-card-col">
-        <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20260217_MasterPresentation.html">
-          <img loading="lazy" src="news-detail\images\MasterPresentation\MasterPresentation_tham.jpg" class="card-img-top" alt="ニュース1">
-          <div class="card-body">
-            <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
-              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">修論発表</span>
-              <!-- 追加したい分だけ増やす -->
-              <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
-            </div>
-            <h3 class="h5">修士論文審査会</h3>
-            <p class="card-text small text-secondary">修士論文審査会で2年間の成果を発表</p>
-            <div class="small text-secondary"><i class="bi bi-calendar-week"></i>2026-2-17</div>
-          </div>
-        </a>
-      </div>
-      <!-- Master -->
-
       <!-- CSS2025 -->
       <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20251026_css2025.html">
-          <img loading="lazy" src="news-detail\images\css2025\css2025-tham.jpg" class="card-img-top" alt="ニュース1">
+          <img loading="lazy" src="news-detail/images/css2025/css2025-thumb.jpg" class="card-img-top" alt="CSS2025">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
-              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">国内会議</span>
-              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">受賞</span>
-              <!-- 追加したい分だけ増やす -->
-              <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">学会発表</span>
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">研究</span>
             </div>
             <h3 class="h5">CSS2025に参加、発表</h3>
-            <p class="card-text small text-secondary">CSS2025で論文発表。論文賞をダブル受賞!!</p>
+            <p class="card-text small text-secondary">CSS2025で研究発表を行い、学会での議論も深めました。</p>
             <div class="small text-secondary"><i class="bi bi-calendar-week"></i> 2025-10-26 ~ 2025-10-31</div>
           </div>
         </a>
@@ -175,15 +168,13 @@
       <!-- IEEEMetaCom2025 -->
       <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20250827_IEEEMetacom2025.html">
-          <img loading="lazy" src="news-detail\images\IEEEMetaCom2025\IEEEMetaCom-thum.jpg" class="card-img-top" alt="ニュース1">
+          <img loading="lazy" src="news-detail/images/ieeemetacom2025/ieeemetacom-thumb.jpg" class="card-img-top" alt="IEEE MetaCom2025">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
               <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">国際会議</span>
-              <!-- 追加したい分だけ増やす -->
-              <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
             </div>
             <h3 class="h5">IEEE MetaCom2025に参加、発表</h3>
-            <p class="card-text small text-secondary">IEEE MetaCom2025に参加。初の国際会議で発表！</p>
+            <p class="card-text small text-secondary">IEEE MetaCom2025に参加し、国際会議で研究成果を発表しました。</p>
             <div class="small text-secondary"><i class="bi bi-calendar-week"></i> 2025-8-27 ~ 2025-8-29</div>
           </div>
         </a>
@@ -193,15 +184,13 @@
       <!-- IoRsym2025 -->
       <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20250314_IoRsym.html">
-          <img loading="lazy" src="news-detail\images\IoRSym2025\IoRsym-tham.png" class="card-img-top" alt="ニュース1">
+          <img loading="lazy" src="news-detail/images/iosym2025/iosym-thumb.png" class="card-img-top" alt="IoRsym2025">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
-              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">国内会議</span>
-              <!-- 追加したい分だけ増やす -->
-              <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">学会発表</span>
             </div>
-            <h3 class="h5">CREST 領域横断シンポジウムに参加、発表</h3>
-            <p class="card-text small text-secondary">CREST 領域横断シンポジウムに参加。他分野の専門家とのディスカッション!</p>
+            <h3 class="h5">CREST 共同研究プロジェクトで発表</h3>
+            <p class="card-text small text-secondary">CREST 共同研究プロジェクトに参加し、XRに関する研究成果を発表しました。</p>
             <div class="small text-secondary"><i class="bi bi-calendar-week"></i> 2025-3-6 ~ 2025-3-7</div>
           </div>
         </a>
@@ -211,15 +200,13 @@
       <!-- SPT2025 -->
       <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20250306_SPT202503.html">
-          <img loading="lazy" src="news-detail\images\spt2025\spt2025-tham.png" class="card-img-top" alt="ニュース1">
+          <img loading="lazy" src="news-detail/images/spt2025/spt2025-thumb.png" class="card-img-top" alt="SPT2025">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
-              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">国内会議</span>
-              <!-- 追加したい分だけ増やす -->
-              <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">学会発表</span>
             </div>
-            <h3 class="h5">第58回SPT研究発表会（3月研）に参加、発表</h3>
-            <p class="card-text small text-secondary">第58回セキュリティ心理学とトラスト（SPT）研究発表会に参加、XR環境下における聴覚刺激攻撃の可能性について発表しました。</p>
+            <h3 class="h5">第58回SPT研究会で発表</h3>
+            <p class="card-text small text-secondary">第58回SPT研究会で、XR技術に関する研究成果について発表しました。</p>
             <div class="small text-secondary"><i class="bi bi-calendar-week"></i> 2025-3-14</div>
           </div>
         </a>
@@ -229,15 +216,13 @@
       <!-- AIP2024 -->
       <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20250303_AIP2024.html">
-          <img loading="lazy" src="news-detail\images\aip2024\aip2024-tham.png" class="card-img-top" alt="ニュース1">
+          <img loading="lazy" src="news-detail/images/aip2024/aip2024-thumb.png" class="card-img-top" alt="AIP2024">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
-              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">プロジェクト</span>
-              <!-- 追加したい分だけ増やす -->
-              <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">イベント</span>
             </div>
-            <h3 class="h5">AIPチャレンジ2024成果報告会に参加、発表</h3>
-            <p class="card-text small text-secondary">AIPチャレンジ成果報告会に参加し、1年間の研究成果を発表しました。</p>
+            <h3 class="h5">AIPチャレンジ2024成果報告会で発表</h3>
+            <p class="card-text small text-secondary">AIPチャレンジ2024の成果報告会にて、研究の途中成果を発表しました。</p>
             <div class="small text-secondary"><i class="bi bi-calendar-week"></i> 2025-3-3 ~ 2025-3-4</div>
           </div>
         </a>
@@ -247,16 +232,14 @@
       <!-- CSS2024 -->
       <div class="col-md-6 col-lg-4 news-card-col">
         <a class="card card-hover js-tilt text-reset text-decoration-none h-100" data-hover-lift href="news-detail/20241022_css2024.html">
-          <img loading="lazy" src="news-detail\images\css2024\css2024-tham.jpg" class="card-img-top" alt="ニュース1">
+          <img loading="lazy" src="news-detail/images/css2024/css2024-thumb.jpg" class="card-img-top" alt="CSS2024">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2 mb-2" aria-label="ラベル">
-              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">国内会議</span>
-              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">受賞</span>
-              <!-- 追加したい分だけ増やす -->
-              <!-- <span class="badge rounded-pill text-bg-warning-subtle">受賞</span> -->
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">学会発表</span>
+              <span class="badge rounded-pill text-bg-light text-bg-primary-subtle">研究</span>
             </div>
             <h3 class="h5">CSS2024に参加、発表</h3>
-            <p class="card-text small text-secondary">CSS2024にてデモンストレーション発表、最優秀デモンストレーション章を獲得！</p>
+            <p class="card-text small text-secondary">CSS2024で研究発表を行い、デモンストレーション発表で優秀賞を受賞しました。</p>
             <div class="small text-secondary"><i class="bi bi-calendar-week"></i> 2024-10-22 ~ 2024-10-25</div>
           </div>
         </a>
